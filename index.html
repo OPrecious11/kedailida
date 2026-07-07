@@ -10,12 +10,12 @@
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<div class="page-fold">
+
   <header class="site-header">
     <div class="container">
-        <a href="index.html" class="logo">
-            <img src="assets/kedailida Logo Variations-07 2.png" alt="Kedailida">
-          </a>
+      <a href="index.html" class="logo">
+        <img src="assets/kedailida Logo Variations-07 2.png" alt="Kedailida">
+      </a>
       <nav>
         <ul class="nav-links">
           <li><a href="portfolio.html">Portfolio</a></li>
@@ -28,23 +28,43 @@
     </div>
   </header>
 
-  <section class="hero">
-    <img src="assets/Abel Illustration.jpg" alt="" class="hero-bg">
-    <div class="hero-overlay"></div>
+  <div class="content-viewport">
+    <div class="snap-track" id="snapTrack">
 
-    <div class="hero-content">
-        <div class="hero-badge">
+      <section class="hero">
+        <img src="assets/Abel Illustration.jpg" alt="" class="hero-bg">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+          <div class="hero-badge">
             <img src="assets/Logo Stamp.png" alt="">
           </div>
-      <h1 class="hero-title">Welcome to a Brand New World</h1>
-      <a href="contact.html" class="btn-hero-cta">Start Project</a>
-      <a href="#next" class="scroll-indicator" aria-label="Scroll down">
-        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
-          <polyline points="6 9 12 15 18 9"></polyline>
-        </svg>
-      </a>
+          <h1 class="hero-title">Welcome to a Brand New World</h1>
+          <a href="contact.html" class="btn-hero-cta">Start Project</a>
+          <a href="#next" class="scroll-indicator" aria-label="Scroll down">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </a>
+        </div>
+      </section>
+
+      <div class="triptych">
+        <a href="portfolio.html" class="triptych-panel">
+          <img src="assets/Water Goddess Exclusive .jpg" alt="Portfolio">
+          <span class="triptych-label">Portfolio</span>
+        </a>
+        <a href="about.html" class="triptych-panel">
+          <img src="assets/M_ralda Illustration.jpg" alt="About Us">
+          <span class="triptych-label">About Us</span>
+        </a>
+        <a href="services.html" class="triptych-panel">
+          <img src="assets/Angel Ascension copy.jpg" alt="Services">
+          <span class="triptych-label">Services</span>
+        </a>
+      </div>
+
     </div>
-  </section>
+  </div>
 
   <footer class="site-footer">
     <div class="container">
@@ -60,67 +80,12 @@
         <a href="#" aria-label="LinkedIn">
           <svg viewBox="0 0 24 24" fill="currentColor">
             <path d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8h4V23h-4V8zM8.5 8h3.8v2.05h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V23h-4v-6.9c0-1.65-.03-3.77-2.3-3.77-2.3 0-2.66 1.8-2.66 3.65V23h-4V8z"></path>
-        </svg>
+          </svg>
         </a>
       </div>
     </div>
   </footer>
-</div>
 
-<section id="next" class="page-fold">
-    <header class="site-header">
-      <div class="container">
-        <a href="index.html" class="logo">
-          <img src="assets/kedailida Logo Variations-07 2.png" alt="Kedailida">
-        </a>
-        <nav>
-          <ul class="nav-links">
-            <li><a href="portfolio.html">Portfolio</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-        </nav>
-        <a href="contact.html" class="btn-nav-cta">Start Project</a>
-      </div>
-    </header>
-  
-    <div class="triptych">
-      <a href="portfolio.html" class="triptych-panel">
-        <img src="assets/Water Goddess Exclusive .jpg" alt="Portfolio">
-        <span class="triptych-label">Portfolio</span>
-      </a>
-      <a href="about.html" class="triptych-panel">
-        <img src="assets/M_ralda Illustration.jpg" alt="About Us">
-        <span class="triptych-label">About Us</span>
-      </a>
-      <a href="services.html" class="triptych-panel">
-        <img src="assets/Angel Ascension copy.jpg" alt="Services">
-        <span class="triptych-label">Services</span>
-      </a>
-    </div>
-  
-    <footer class="site-footer">
-      <div class="container">
-        <p class="footer-copy">© 2026 Kedailida. All rights reserved.</p>
-        <div class="social-links">
-          <a href="#" aria-label="Instagram">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-              <rect x="2" y="2" width="20" height="20" rx="5"></rect>
-              <circle cx="12" cy="12" r="4"></circle>
-              <circle cx="17.5" cy="6.5" r="1"></circle>
-            </svg>
-          </a>
-          <a href="#" aria-label="LinkedIn">
-            <svg viewBox="0 0 24 24" fill="currentColor">
-              <path d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8h4V23h-4V8zM8.5 8h3.8v2.05h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V23h-4v-6.9c0-1.65-.03-3.77-2.3-3.77-2.3 0-2.66 1.8-2.66 3.65V23h-4V8z"></path>
-            </svg>
-          </a>
-        </div>
-      </div>
-    </footer>
-  
-  </section>
-
+  <script src="js/script.js"></script>
 </body>
 </html>
