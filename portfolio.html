@@ -8,6 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Jost:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
@@ -29,52 +30,55 @@
   </header>
 
   <div class="page-scroll">
+    <section class="char-select">
 
-    <section class="page-title">
-      <img src="assets/Water Goddess Exclusive .jpg" alt="" class="page-title-bg">
-      <div class="page-title-overlay"></div>
-      <div class="page-title-content">
-        <span class="page-title-ghost">Portfolio</span>
-        <h1 class="page-title-main">Portfolio</h1>
-      </div>
-    </section>
-
-    <section class="filter-bar">
-      <div class="container filter-bar-inner">
-        <span class="filter-label">Filter by:</span>
-        <div class="filter-buttons">
-          <button class="filter-btn active" data-filter="all">Character Designs</button>
-          <button class="filter-btn" data-filter="keyframe">Keyframe &amp; Storyboard</button>
-          <button class="filter-btn" data-filter="promotional">Promotional</button>
-          <button class="filter-btn" data-filter="bookcover">Book Cover</button>
-          <button class="filter-btn" data-filter="comic">Comic Books</button>
+    
+      <div class="char-select-main">
+        <div class="char-preview" id="charPreview">
+          <img id="previewImg" src="" alt="">
+          <div class="preview-info">
+            <span id="previewTag"></span>
+            <h2 id="previewName"></h2>
+          </div>
+    
+          <div class="cs-filters-glass" id="csFilters">
+            <div class="cs-filter-indicator" id="filterIndicator"></div>
+            <button class="cs-filter-btn active" data-filter="all">All</button>
+            <button class="cs-filter-btn" data-filter="character">Character Designs</button>
+            <button class="cs-filter-btn" data-filter="keyframe">Keyframe &amp; Storyboard</button>
+            <button class="cs-filter-btn" data-filter="promotional">Promotional</button>
+            <button class="cs-filter-btn" data-filter="bookcover">Book Cover</button>
+            <button class="cs-filter-btn" data-filter="comic">Comic Books</button>
+          </div>
+    
+          <div class="char-stats-glass" id="charStatsGlass">
+            <button class="char-stats-toggle" id="charStatsToggle">
+              <span>Stats</span>
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+    
+            <div class="char-stats-body" id="charStatsBody">
+              <div class="stat">
+                <div class="label"><span>Detail</span><span id="statDetailVal">—</span></div>
+                <div class="track"><div class="fill" id="statDetailFill"></div></div>
+              </div>
+              <div class="stat">
+                <div class="label"><span>Complexity</span><span id="statComplexityVal">—</span></div>
+                <div class="track"><div class="fill" id="statComplexityFill"></div></div>
+              </div>
+              <div class="stat">
+                <div class="label"><span>Color Work</span><span id="statColorVal">—</span></div>
+                <div class="track"><div class="fill" id="statColorFill"></div></div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </section>
-
-    <section class="portfolio-grid">
-      <div class="grid-row grid-row-left">
-        <div class="grid-item">
-          <img src="https://picsum.photos/seed/keda1/600/800" alt="Character design 1">
-        </div>
-        <div class="grid-item">
-          <img src="https://picsum.photos/seed/keda2/600/800" alt="Character design 2">
-        </div>
-        <div class="grid-item">
-          <img src="https://picsum.photos/seed/keda3/600/800" alt="Character design 3">
-        </div>
+    
+      <div class="char-filmstrip-wrap">
+        <div class="char-filmstrip" id="charFilmstrip"></div>
       </div>
-      <div class="grid-row grid-row-right">
-        <div class="grid-item">
-          <img src="https://picsum.photos/seed/keda4/600/800" alt="Character design 4">
-        </div>
-        <div class="grid-item">
-          <img src="https://picsum.photos/seed/keda5/600/800" alt="Character design 5">
-        </div>
-        <div class="grid-item">
-          <img src="https://picsum.photos/seed/keda6/600/800" alt="Character design 6">
-        </div>
-      </div>
+    
     </section>
 
     <footer class="site-footer-dark">
@@ -117,8 +121,8 @@
         </div>
       </div>
     </footer>
-
   </div>
 
+  <script src="js/portfolio.js"></script>
 </body>
 </html>

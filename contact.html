@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Start a Project — Kedailida</title>
+<link rel="icon" type="image/x-icon" href="/assets/Logo Stamp.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Jost:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <a href="index.html" class="logo">
+        <img src="assets/kedailida Logo Variations-07 2.png" alt="Kedailida">
+      </a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+      </nav>
+      <a href="contact.html" class="btn-nav-cta">Start Project</a>
+    </div>
+  </header>
+
+  <div class="page-scroll">
+    <section class="contact-hero">
+      <span class="eyebrow">Get In Touch</span>
+      <h1>Start a Project</h1>
+      <p class="contact-sub">We partner with visionary studios to craft definitive concept art. Tell us about your world, and let's begin the collaboration.</p>
+
+      <div class="discipline-label">Select Discipline</div>
+      <div class="discipline-cards" id="disciplineCards">
+        <div class="discipline-card active" data-discipline="character">
+          <img src="assets/Jyamelah- Pin up.jpg" alt="Character Design">
+          <div class="cap">Character Design</div>
+        </div>
+        <div class="discipline-card" data-discipline="keyframe">
+          <img src="assets/Angel Ascension copy.jpg" alt="Keyframe & Storyboard">
+          <div class="cap">Keyframe &amp; Storyboard</div>
+        </div>
+        <div class="discipline-card" data-discipline="promotional">
+          <img src="assets/Abel Illustration.jpg" alt="Promotional">
+          <div class="cap">Promotional</div>
+        </div>
+        <div class="discipline-card" data-discipline="bookcover">
+          <img src="assets/Water Goddess Exclusive .jpg" alt="Book Cover">
+          <div class="cap">Book Cover</div>
+        </div>
+        <div class="discipline-card" data-discipline="comic">
+          <img src="assets/Painting Study 25-06-23 copy.jpg" alt="Comic Books">
+          <div class="cap">Comic Books</div>
+        </div>
+      </div>
+
+      <form class="contact-form-glass" id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" enctype="multipart/form-data">
+        <input type="hidden" name="discipline" id="disciplineInput" value="Character Design">
+
+        <div class="form-row">
+          <div class="field">
+            <label for="package">Package</label>
+            <select name="package" id="package" required></select>
+          </div>
+          <div class="field">
+            <label for="company">Studio / Company</label>
+            <input type="text" name="company" id="company" placeholder="Your organization">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="field">
+            <label for="projectName">Project Name</label>
+            <input type="text" name="projectName" id="projectName" placeholder="Codename or working title" required>
+          </div>
+          <div class="field">
+            <label for="timeline">Estimated Timeline</label>
+            <select name="timeline" id="timeline" required>
+              <option value="">Select duration</option>
+              <option value="Under 1 week">Under 1 week</option>
+              <option value="1–2 weeks">1–2 weeks</option>
+              <option value="2–4 weeks">2–4 weeks</option>
+              <option value="1–2 months">1–2 months</option>
+              <option value="Flexible">Flexible</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="field field-full">
+            <label for="brief">Project Brief</label>
+            <textarea name="brief" id="brief" placeholder="Provide a high-level overview of the world, art style, and specific deliverables required." required></textarea>
+          </div>
+        </div>
+
+        <div class="form-row">
+            <div class="field field-full">
+              <label for="attachment">Attach Brief Document <span class="optional-tag">(optional)</span></label>
+              <div class="file-upload">
+                <input type="file" name="attachment" id="attachment" accept=".pdf,.doc,.docx">
+                <label for="attachment" class="file-upload-btn">Choose File</label>
+                <span class="file-upload-name" id="fileUploadName">No file selected</span>
+              </div>
+              <p class="file-hint">PDF, DOC, or DOCX — max 10MB. Use this if your brief is easier to attach than type.</p>
+            </div>
+          </div>
+
+        <div class="form-row">
+          <div class="field">
+            <label for="email">Your Email</label>
+            <input type="email" name="email" id="email" placeholder="you@studio.com" required>
+          </div>
+        </div>
+
+        <button type="submit" class="submit-btn" id="submitBtn">Submit Inquiry</button>
+        <p class="form-status" id="formStatus"></p>
+      </form>
+    </section>
+
+    <footer class="site-footer-dark">
+      <div class="container footer-dark-top">
+        <div class="footer-brand">
+          <img src="assets/kedailida Logo 02.png" alt="Kedailida" class="footer-logo">
+          <p class="footer-newsletter-label">Get news on studio updates.</p>
+          <form class="footer-newsletter-form">
+            <input type="email" placeholder="Email" required>
+            <button type="submit">Join</button>
+          </form>
+          <p class="footer-newsletter-note">We respect your inbox and handle your data with care.</p>
+        </div>
+
+        <div class="footer-links">
+          <h4>Navigate</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="about.html">About our team</a></li>
+            <li><a href="contact.html">Work with us</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="container footer-dark-bottom">
+        <p>© 2026 Kedailida. All rights reserved.</p>
+        <div class="footer-legal">
+          <a href="#">Privacy policy</a>
+          <a href="#">Terms of service</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="js/contact.js"></script>
+</body>
+</html>
