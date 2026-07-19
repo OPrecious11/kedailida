@@ -3,11 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Portfolio — Kedailida</title>
+<title>Careers — Kedailida</title>
 <link rel="icon" type="image/x-icon" href="/assets/Logo Stamp.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Jost:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -19,7 +18,7 @@
       </a>
       <nav>
         <ul class="nav-links">
-          <li><a href="portfolio.html" class="active">Portfolio</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
           <li><a href="services.html">Services</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="contact.html">Contact</a></li>
@@ -30,56 +29,21 @@
   </header>
 
   <div class="page-scroll">
-    <section class="char-select">
 
-    
-      <div class="char-select-main">
-        <div class="char-preview" id="charPreview">
-          <img id="previewImg" src="" alt="">
-          <div class="preview-info">
-            <span id="previewTag"></span>
-            <h2 id="previewName"></h2>
-          </div>
-    
-          <div class="cs-filters-glass" id="csFilters">
-            <div class="cs-filter-indicator" id="filterIndicator"></div>
-            <button class="cs-filter-btn active" data-filter="all">All</button>
-            <button class="cs-filter-btn" data-filter="character">Character Designs</button>
-            <button class="cs-filter-btn" data-filter="keyframe">Keyframe &amp; Storyboard</button>
-            <button class="cs-filter-btn" data-filter="promotional">Promotional</button>
-            <button class="cs-filter-btn" data-filter="bookcover">Book Cover</button>
-            <button class="cs-filter-btn" data-filter="comic">Comic Books</button>
-          </div>
-    
-          <div class="char-stats-glass" id="charStatsGlass">
-            <button class="char-stats-toggle" id="charStatsToggle">
-              <span>Stats</span>
-              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
-            </button>
-    
-            <div class="char-stats-body" id="charStatsBody">
-              <div class="stat">
-                <div class="label"><span>Detail</span><span id="statDetailVal">—</span></div>
-                <div class="track"><div class="fill" id="statDetailFill"></div></div>
-              </div>
-              <div class="stat">
-                <div class="label"><span>Complexity</span><span id="statComplexityVal">—</span></div>
-                <div class="track"><div class="fill" id="statComplexityFill"></div></div>
-              </div>
-              <div class="stat">
-                <div class="label"><span>Color Work</span><span id="statColorVal">—</span></div>
-                <div class="track"><div class="fill" id="statColorFill"></div></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    
-      <div class="char-filmstrip-wrap">
-        <div class="char-filmstrip" id="charFilmstrip"></div>
-      </div>
-    
+    <section class="careers-hero">
+      <img src="assets/NewCharacter.jpg" alt="" class="careers-hero-bg">
+    <div class="careers-hero-fade"></div>
+    <div class="careers-hero-content">
+      <span class="about-tag">Join the Studio</span>
+      <h1>Work With Us</h1>
+      <p>We're always looking to connect with talented artists who share our passion for visual storytelling. Explore current openings below, or reach out even if nothing fits right now.</p>
     </section>
+
+    <section class="careers-list">
+        <div class="careers-list-inner" id="careersList">
+          <!-- Roles injected by JS -->
+        </div>
+      </section>
 
     <footer class="site-footer-dark">
       <div class="container footer-dark-top">
@@ -121,9 +85,10 @@
         </div>
       </div>
     </footer>
-  </div>
 
-  <script src="js/portfolio.js"></script>
+  </div>
+  <script src="js/careers-data.js"></script>
+  <script src="js/careers.js"></script>
   <script src="js/scroll-reveal.js"></script>
 </body>
 </html>
