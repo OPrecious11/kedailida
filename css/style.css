@@ -162,9 +162,19 @@
     left: 50%;
     transform: translateX(-50%);
     width: 5px;
-    height: 5px;
+    height: 5px; 
     border-radius: 50%;
     background: var(--rust-deep);
+  }
+
+  .nav-home-link {
+    display: none;
+  }
+  
+  @media (max-width: 900px) {
+    .nav-home-link {
+      display: block;
+    }
   }
   
   .btn-nav-cta {
