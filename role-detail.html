@@ -16,15 +16,20 @@
       <a href="index.html" class="logo">
         <img src="assets/kedailida Logo Variations-07 2.png" alt="Kedailida">
       </a>
-      <nav>
+      <nav class="nav-wrap" id="navWrap">
         <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
           <li><a href="portfolio.html">Portfolio</a></li>
           <li><a href="services.html">Services</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="contact.html">Contact</a></li>
+                  <li><a href="careers.html">Jobs</a></li>
         </ul>
       </nav>
-      <a href="contact.html" class="btn-nav-cta">Start Project</a>
+            <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+<a href="start-project.html" class="btn-nav-cta">Start Project</a>
     </div>
   </header>
 
@@ -34,7 +39,7 @@
       <div class="role-detail-inner" id="roleDetailSection">
         <!-- Injected by JS -->
       </div>
-    </section>
+    </section> 
 
     <footer class="site-footer-dark">
       <div class="container footer-dark-top">
@@ -78,5 +83,6 @@
   <script src="js/careers-data.js"></script>
   <script src="js/role-detail.js"></script>
   <script src="js/scroll-reveal.js"></script>
+<script src="js/nav-mobile.js"></script>
 </body>
 </html>

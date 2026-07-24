@@ -17,15 +17,23 @@
       <a href="index.html" class="logo">
         <img src="assets/kedailida Logo Variations-07 2.png" alt="Kedailida">
       </a>
-      <nav>
+      <nav class="nav-wrap" id="navWrap">
+        <a href="index.html" class="nav-wrap-logo">
+          <img src="assets/kedailida Logo Variations-07 2.png" alt="Kedailida">
+        </a>
         <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
           <li><a href="portfolio.html">Portfolio</a></li>
           <li><a href="services.html">Services</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="contact.html">Contact</a></li>
+                  <li><a href="careers.html">Jobs</a></li>
         </ul>
       </nav>
-<a href="contact.html" class="btn-nav-cta">Start Project</a>
+      <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+<a href="start-project.html" class="btn-nav-cta">Start Project</a>
     </div>
   </header>
 
@@ -41,7 +49,7 @@
             <img src="assets/Logo Stamp.png" alt="">
           </div>
           <h1 class="hero-title">Welcome to a Brand New World</h1>
-          <a href="contact.html" class="btn-hero-cta">Start Project</a>
+          <a href="start-project.html" class="btn-hero-cta">Start Project</a>
           <a href="#next" class="scroll-indicator" aria-label="Scroll down">
             <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
               <polyline points="6 9 12 15 18 9"></polyline>
@@ -57,14 +65,23 @@
         <div class="float-cards">
           <a href="portfolio.html" class="float-card" data-tilt>
             <img src="assets/Water Goddess Exclusive .jpg" alt="Portfolio">
+            <span class="float-card-icon">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="7" height="7" rx="1"></rect><rect x="14" y="3" width="7" height="7" rx="1"></rect><rect x="3" y="14" width="7" height="7" rx="1"></rect><rect x="14" y="14" width="7" height="7" rx="1"></rect></svg>
+            </span>
             <div class="float-card-label">Portfolio</div>
           </a>
           <a href="about.html" class="float-card" data-tilt>
             <img src="assets/M_ralda Illustration.jpg" alt="About Us">
+            <span class="float-card-icon">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="4"></circle><path d="M4 20c0-4.4 3.6-8 8-8s8 3.6 8 8"></path></svg>
+            </span>
             <div class="float-card-label">About Us</div>
           </a>
           <a href="services.html" class="float-card" data-tilt>
             <img src="assets/Angel Ascension copy.jpg" alt="Services">
+            <span class="float-card-icon">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2l2.4 6.6L21 11l-6.6 2.4L12 20l-2.4-6.6L3 11l6.6-2.4z"></path></svg>
+            </span>
             <div class="float-card-label">Services</div>
           </a>
         </div>
@@ -94,5 +111,6 @@
   </footer>
 
   <script src="js/script.js"></script>
+<script src="js/nav-mobile.js"></script>
 </body>
 </html>

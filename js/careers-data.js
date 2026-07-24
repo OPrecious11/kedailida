@@ -43,4 +43,4 @@ const openings = [
     }
   ];
   
-  const applyEmail = "careers@kedailida.com";
+  const applyEmail = "info@kedailida.com";

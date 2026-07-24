@@ -16,15 +16,20 @@
       <a href="index.html" class="logo">
         <img src="assets/kedailida Logo Variations-07 2.png" alt="Kedailida">
       </a>
-      <nav>
+      <nav class="nav-wrap" id="navWrap">
         <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
           <li><a href="portfolio.html">Portfolio</a></li>
           <li><a href="services.html">Services</a></li>
           <li><a href="about.html" class="active">About</a></li>
           <li><a href="contact.html">Contact</a></li>
+                  <li><a href="careers.html">Jobs</a></li>
         </ul>
       </nav>
-      <a href="contact.html" class="btn-nav-cta">Start Project</a>
+            <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+<a href="start-project.html" class="btn-nav-cta">Start Project</a>
     </div>
   </header>
 
@@ -39,7 +44,7 @@
         <p>At Kedailida, we transform ideas into immersive visual experiences through concept art, illustration, and visual storytelling. We partner with authors, game developers, publishers, brands, and storytellers to build compelling worlds, memorable characters, and visuals that inspire.</p>
         <div class="about-hero-ctas">
           <a href="portfolio.html" class="about-btn-outline">View Our Portfolio</a>
-          <a href="contact.html" class="about-btn-solid">Start a Project</a>
+          <a href="start-project.html" class="about-btn-solid">Start a Project</a>
         </div>
       </div>
     </section>
@@ -208,7 +213,7 @@
         <h2>Let's Build Something Extraordinary</h2>
         <p>Whether you're writing a novel, developing a game, launching a brand, or exploring a new creative idea, we'd love to help bring your vision to life.</p>
         <div class="final-cta-buttons">
-          <a href="contact.html" class="about-btn-solid">Start a Project</a>
+          <a href="start-project.html" class="about-btn-solid">Start a Project</a>
           <a href="contact.html" class="about-btn-outline">Contact Us</a>
         </div>
       </section>
@@ -257,5 +262,6 @@
 
   <script src="js/scroll-reveal.js"></script>
   <script src="js/about.js"></script>
+<script src="js/nav-mobile.js"></script>
 </body>
 </html>

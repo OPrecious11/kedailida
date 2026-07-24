@@ -571,7 +571,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center 30%;
+    object-position: center 20%;
     transition: opacity 0.4s ease;
   }
   
@@ -606,7 +606,8 @@
   .char-preview {
     position: relative;
     width: 100%;
-    height: 640px;
+    aspect-ratio: 3 / 4;
+    max-height: 640px;
     border-radius: 16px;
     overflow: hidden;
     background: #111;
@@ -745,6 +746,31 @@
     box-shadow: 0 0 24px 4px rgba(201,122,61,0.5);
     transform: translateY(-4px);
   }
+
+  @media (max-width: 900px) {
+    .char-preview {
+      aspect-ratio: 3 / 4;
+      max-height: 460px;
+    }
+  }
+    .cs-filters-glass {
+      top: 12px;
+    }
+    .char-stats-glass {
+      top: 68px;
+      bottom: auto;
+      right: 12px;
+      width: 140px;
+    }
+    .preview-info {
+      padding: 20px;
+    }
+    .preview-info h2 {
+      font-size: 20px;
+    }
+    .preview-info span {
+      font-size: 11px;
+    }
   
   /* ============================================
      Services — Numbered Chapter Layout (always dark, deliberate showcase)
@@ -893,6 +919,23 @@
   .chapter-nav-item.active {
     color: var(--white);
   }
+
+  @media (max-width: 900px) {
+    .chapter-nav-glass {
+      top: 16px;
+      left: 16px;
+      right: 16px;
+      transform: none;
+      max-width: none;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      justify-content: flex-start;
+      -webkit-overflow-scrolling: touch;
+    }
+    .chapter-content {
+      padding-top: 130px;
+    }
+  }
   
   .chapter-glance {
     position: absolute;
@@ -929,6 +972,22 @@
   
   .chapter-glance .row:last-child {
     margin-bottom: 0;
+  }
+
+  @media (max-width: 900px) {
+    .chapter {
+      overflow-y: auto;
+    }
+    .chapter-content {
+      justify-content: flex-start;
+      padding: 130px 24px 24px;
+      max-width: 100%;
+    }
+    .chapter-glance {
+      position: static;
+      width: 100%;
+      margin-top: 24px;
+    }
   }
   
   .chapter-dots-glass {
@@ -1331,9 +1390,6 @@
      Responsive
      ============================================ */
   @media (max-width: 900px) {
-    .nav-links {
-      display: none;
-    }
     .container {
       padding: 0 24px;
     }
@@ -1377,7 +1433,6 @@
     }
     
     .chapter-title { font-size: 36px; }
-    .chapter-content { padding: 0 32px; }
     .chapter-num { left: 32px; top: 32px; }
     .chapter-dots { display: none; }
     .chapter-arrow { left: 32px; }
@@ -1489,19 +1544,82 @@
   transform: translateY(0);
 }
 
+.float-card-icon {
+  display: none;
+}
+
 @media (max-width: 900px) {
-  .float-cards {
-    flex-direction: column;
-    gap: 20px;
+  .float-scene {
+    padding: 32px 20px;
   }
   .float-card {
-    width: 220px;
-    height: 300px;
+    width: 100%;
+    max-width: 100%;
+    height: 160px;
+    border-radius: 12px;
   }
-  .float-card:nth-child(1),
-  .float-card:nth-child(2),
-  .float-card:nth-child(3) {
+  .float-card:hover {
+    transform: none !important;
+  }
+  .float-card-label {
+    opacity: 1;
     transform: none;
+    font-size: 15px;
+    padding: 16px;
+  }
+}
+
+@media (max-width: 900px) {
+  .float-scene-bg,
+  .float-scene-overlay {
+    display: none;
+  }
+  .float-scene {
+    background: #0B0908;
+    padding: 24px 20px;
+  }
+  .float-cards {
+    flex-direction: column;
+    gap: 12px;
+    perspective: none;
+    width: 100%;
+  }
+  .float-card {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    border-radius: 12px;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.12);
+    box-shadow: none;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 14px 20px;
+    transform: none !important;
+    overflow: visible;
+  }
+  .float-card img {
+    display: block;
+    position: static;
+    width: 52px;
+    height: 52px;
+    border-radius: 8px;
+    object-fit: cover;
+    flex-shrink: 0;
+  }
+  .float-card-icon {
+    display: none;
+  }
+  .float-card-label {
+    position: static;
+    opacity: 1;
+    transform: none;
+    background: none;
+    padding: 0;
+    font-size: 16px;
+    letter-spacing: 1px;
+    text-align: left;
   }
 }
 
@@ -2703,4 +2821,222 @@
   .reveal-section.is-visible {
     opacity: 1;
     transform: translateY(0);
+  }
+
+  /* ============================================
+   Mobile Hamburger Menu
+   ============================================ */
+.hamburger-btn {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 32px;
+  height: 32px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 200;
+}
+
+.hamburger-btn span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: var(--page-ink);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.hamburger-btn.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.hamburger-btn.open span:nth-child(2) { opacity: 0; }
+.hamburger-btn.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+@media (max-width: 900px) {
+  .site-header .logo {
+    display: none;
+  }
+  .hamburger-btn {
+    display: flex;
+  }
+  .nav-wrap {
+    position: fixed;
+    top: var(--nav-height);
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--page-surface);
+    transform: translateX(100%);
+    transition: transform 0.35s ease;
+    z-index: 150;
+    overflow-y: auto;
+  }
+  .nav-wrap.open {
+    transform: translateX(0);
+  }
+  .nav-wrap-logo {
+    display: block;
+    padding: 24px;
+    border-bottom: 1px solid var(--page-border);
+  }
+  .nav-wrap-logo img {
+    height: 36px;
+    width: auto;
+  }
+  .nav-links {
+    display: flex !important;
+    flex-direction: column;
+    gap: 0;
+    padding: 12px 24px;
+  }
+  .nav-links li {
+    border-bottom: 1px solid var(--page-border);
+  }
+  .nav-links a {
+    display: block;
+    padding: 18px 4px;
+    font-size: 16px;
+  }
+}
+
+.nav-wrap-logo {
+  display: none;
+}
+
+/* ============================================
+   Contact (real contact page)
+   ============================================ */
+   .contact-page-hero {
+    background: #0B0908;
+    padding: 80px 64px 48px;
+    text-align: center;
+  }
+  
+  .contact-page-hero h1 {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 44px;
+    color: var(--white);
+    margin-bottom: 16px;
+  }
+  
+  .contact-page-hero p {
+    font-family: var(--font-body);
+    font-size: 15px;
+    color: rgba(255,255,255,0.7);
+    max-width: 480px;
+    margin: 0 auto;
+  }
+  
+  .contact-split {
+    background: #0B0908;
+    padding: 0 64px 80px;
+    display: flex;
+    gap: 32px;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  .contact-info-glass,
+  .contact-message-glass {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 16px;
+    padding: 40px;
+  }
+  
+  .contact-info-glass h4 {
+    font-family: var(--font-ui);
+    font-size: 13px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--rust-bright);
+    margin-bottom: 24px;
+  }
+  
+  .contact-info-row {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    font-family: var(--font-body);
+    font-size: 15px;
+    color: var(--white);
+  }
+  
+  .contact-info-row a {
+    color: var(--white);
+    transition: color 0.2s ease;
+  }
+  
+  .contact-info-row a:hover {
+    color: var(--rust-bright);
+  }
+  
+  .contact-info-label {
+    font-family: var(--font-ui);
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.5);
+    margin-bottom: 4px;
+  }
+  
+  .contact-social-links {
+    display: flex;
+    gap: 10px;
+    margin: 24px 0;
+  }
+  
+  .contact-social-links a {
+    width: 38px;
+    height: 38px;
+    border-radius: 8px;
+    background: rgba(255,255,255,0.1);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s ease;
+  }
+  
+  .contact-social-links a:hover {
+    background: var(--rust-deep);
+  }
+  
+  .contact-social-links svg {
+    width: 18px;
+    height: 18px;
+  }
+  
+  .contact-note {
+    font-family: var(--font-body);
+    font-size: 13px;
+    color: rgba(255,255,255,0.6);
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 20px;
+  }
+  
+  .contact-note a {
+    color: var(--rust-bright);
+  }
+  
+  .contact-message-glass .field {
+    margin-bottom: 20px;
+  }
+  
+  .contact-message-glass textarea {
+    height: 120px;
+    resize: vertical;
+  }
+  
+  @media (max-width: 900px) {
+    .contact-page-hero {
+      padding: 56px 24px 32px;
+    }
+    .contact-split {
+      flex-direction: column;
+      padding: 0 24px 56px;
+    }
   }
