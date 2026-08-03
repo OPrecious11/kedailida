@@ -1145,6 +1145,28 @@
   text-transform: uppercase;
 }
 
+.explore-btn {
+  position: absolute;
+  top: 100px;
+  right: 64px;
+  z-index: 3;
+  width: 260px;
+  text-align: center;
+  border: 1.5px solid var(--rust-bright);
+  color: var(--rust-bright);
+  font-family: var(--font-ui);
+  font-size: 13px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 14px 0;
+  transition: all 0.2s ease;
+}
+
+.explore-btn:hover {
+  background: var(--rust-bright);
+  color: var(--ink);
+}
+
 .glass-includes {
   position: absolute;
   bottom: 100px;
@@ -1988,60 +2010,57 @@
 }
 
 /* ============================================
-   About — Story Split
+   About — Story (full-bleed background, centered text)
    ============================================ */
-   .story-split {
+   .story-bg {
+    position: relative;
+    min-height: 640px;
     display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
     background: #0B0908;
   }
   
-  .story-split-text {
-    flex: 1;
-    padding: 80px 64px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-  
-  .section-label {
-    display: block;
-    font-family: var(--font-ui);
-    font-size: 12px;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    color: var(--rust-bright);
-    margin-bottom: 24px;
-  }
-  
-  .story-split-text p {
-    font-family: var(--font-body);
-    font-size: 16px;
-    line-height: 1.9;
-    color: rgba(255,255,255,0.75);
-    max-width: 480px;
-    margin-bottom: 20px;
-  }
-  
-  .story-split-image {
-    flex: 1;
-    min-height: 480px;
-  }
-  
-  .story-split-image img {
+  .story-bg-img {
+    position: absolute;
+    inset: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center 20%;
+    opacity: 0.55;
+  }
+  
+  .story-bg-fade {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at center, rgba(11,9,8,0.55) 20%, rgba(11,9,8,0.92) 85%);
+  }
+  
+  .story-bg-content {
+    position: relative;
+    z-index: 2;
+    max-width: 680px;
+    padding: 0 24px;
+    text-align: center;
+  }
+  
+  .story-bg-content p {
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.9;
+    color: rgba(255,255,255,0.8);
+    margin-bottom: 20px;
   }
   
   @media (max-width: 900px) {
-    .story-split {
-      flex-direction: column;
-    }
-    .story-split-text {
+    .story-bg {
+      min-height: 480px;
       padding: 48px 24px;
     }
-    .story-split-image {
-      min-height: 320px;
+    .story-bg-content p {
+      font-size: 14px;
     }
   }
 
@@ -2098,6 +2117,10 @@
     text-align: center;
     display: block;
     margin-bottom: 40px;
+    font-family: var(--font-display);
+    font-style: normal;
+    font-size: 40px;
+    color: var(--rust-bright);
   }
   
   .values-grid {
@@ -3050,3 +3073,104 @@
       padding: 0 24px 56px;
     }
   }
+
+  /* ============================================
+   About — Meet the Team
+   ============================================ */
+.team-section {
+  background: #0B0908;
+  padding: 64px;
+}
+
+.team-tiles {
+  display: flex;
+  gap: 16px;
+  height: 480px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.team-tile {
+  position: relative;
+  flex: 1;
+  border-radius: 16px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: flex 0.5s cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+.team-tile.expanded {
+  flex: 3;
+}
+
+.team-tile img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.team-tile-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 28px;
+  background: linear-gradient(0deg, rgba(0,0,0,0.9), transparent 70%);
+}
+
+.team-tile-info {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease 0.15s, transform 0.3s ease 0.15s;
+}
+
+.team-tile.expanded .team-tile-info {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.team-tile-info h3 {
+  font-family: var(--font-display);
+  font-size: 24px;
+  color: var(--white);
+  margin-bottom: 6px;
+}
+
+.team-tile-role {
+  display: block;
+  font-family: var(--font-ui);
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--rust-bright);
+  margin-bottom: 14px;
+}
+
+.team-tile-info p {
+  font-family: var(--font-body);
+  font-size: 14px;
+  line-height: 1.7;
+  color: rgba(255,255,255,0.8);
+  max-width: 420px;
+}
+
+@media (max-width: 900px) {
+  .team-section {
+    padding: 40px 24px;
+  }
+  .team-tiles {
+    flex-direction: column;
+    height: auto;
+  }
+  .team-tile {
+    height: 100px;
+    flex: none;
+  }
+  .team-tile.expanded {
+    height: 320px;
+    flex: none;
+  }
+}

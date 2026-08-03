@@ -1,6 +1,9 @@
+const discipline = "character";
+
 const packages = [
   {
     title: "SINGLE CHARACTER PACKAGE",
+    dropdownValue: "Single Character Package",
     image: "assets/character-single.jpg",
     includes: [
       "1 Full Character Design",
@@ -20,6 +23,7 @@ const packages = [
   },
   {
     title: "STANDARD CHARACTER PACKAGE",
+    dropdownValue: "Standard Character Package",
     image: "assets/character-standard.jpg",
     includes: [
       "Full Character Design sheet",
@@ -40,6 +44,7 @@ const packages = [
   },
   {
     title: "PREMIUM CHARACTER PACKAGE",
+    dropdownValue: "Premium Character Package",
     image: "assets/character-premium.jpg",
     includes: [
       "To be updated"
@@ -76,6 +81,11 @@ function render() {
   includesEl.innerHTML = pkg.includes.map(item => `<li>${item}</li>`).join('');
   bestForEl.innerHTML = pkg.bestFor.map(item => `<li>${item}</li>`).join('');
 
+  const btn = document.getElementById('getThisBtn');
+  if (btn) {
+    btn.href = `start-project.html?discipline=${discipline}&package=${encodeURIComponent(pkg.dropdownValue)}`;
+  }
+
   tabs.forEach((t, i) => t.classList.toggle('active', i === currentIndex));
 }
 
@@ -87,6 +97,5 @@ tabs.forEach(tab => {
   });
 });
 
-window.addEventListener('load', () => moveIndicator(tabs[0]));
-
+moveIndicator(tabs[0]);
 render();
