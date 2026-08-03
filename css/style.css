@@ -2122,7 +2122,7 @@
     font-size: 40px;
     color: var(--rust-bright);
   }
-  
+
   .values-grid {
     display: flex;
     gap: 20px;
@@ -2269,6 +2269,16 @@
   /* ============================================
    About — Why Choose Kedailida
    ============================================ */
+.section-label {
+    text-align: center;
+    display: block;
+    margin-bottom: 40px;
+    font-family: var(--font-display);
+    font-style: normal;
+    font-size: 30px;
+    color: var(--rust-bright);
+}
+  
 .why-choose {
   background: #0B0908;
   padding: 64px;
