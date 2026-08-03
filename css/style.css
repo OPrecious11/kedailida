@@ -2269,15 +2269,16 @@
   /* ============================================
    About — Why Choose Kedailida
    ============================================ */
-.section-label {
-    text-align: center;
+   .section-label {
     display: block;
-    margin-bottom: 40px;
-    font-family: var(--font-display);
-    font-style: normal;
-    font-size: 30px;
+    font-family: var(--font-ui);
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    text-transform: uppercase;
     color: var(--rust-bright);
-}
+    margin-bottom: 24px;
+  }
   
 .why-choose {
   background: #0B0908;
@@ -2308,6 +2309,10 @@
   font-family: var(--font-body);
   font-size: 15px;
   color: rgba(255,255,255,0.85);
+}
+
+.why-choose .section-label {
+  text-align: center;
 }
 
 @media (max-width: 900px) {
