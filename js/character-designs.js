@@ -4,7 +4,7 @@ const packages = [
   {
     title: "SINGLE CHARACTER PACKAGE",
     dropdownValue: "Single Character Package",
-    image: "assets/character-single.jpg",
+    image: "assets/CharacterDesign 06(Dailida).jpg",
     includes: [
       "1 Full Character Design",
       "Front view Character illustration",
@@ -24,7 +24,7 @@ const packages = [
   {
     title: "STANDARD CHARACTER PACKAGE",
     dropdownValue: "Standard Character Package",
-    image: "assets/character-standard.jpg",
+    image: "assets/CharacterDesign 01.jpg",
     includes: [
       "Full Character Design sheet",
       "Front/Side/Back view",
@@ -45,13 +45,23 @@ const packages = [
   {
     title: "PREMIUM CHARACTER PACKAGE",
     dropdownValue: "Premium Character Package",
-    image: "assets/character-premium.jpg",
+    image: "assets/CharacterDesign 07.jpg",
     includes: [
-      "To be updated"
+      "Multiple Character Designs (Up to 5 Characters)",
+      "Full Character Turnarounds",
+      "Expression Sheets",
+      "Costume Variations",
+      "Story-Based Design Direction",
+      "Visual Cohesion Across Entire Cast",
+      "Key Story Moment Concepts",
+      "World Aesthetic Development (Environment Design)"
     ],
-    deliverables: "To be updated",
+    deliverables: "PDF presentation sheets · High resolution export · Organized source files · Commercial usage support",
     bestFor: [
-      "To be updated"
+      "Full novels",
+      "Game concept",
+      "Animation pre-production",
+      "Long-form storytelling projects"
     ]
   }
 ];

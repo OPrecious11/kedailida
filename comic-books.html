@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Comic Book Illustration — Kedailida</title>
+<link rel="icon" type="image/x-icon" href="/assets/Logo Stamp.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Jost:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,500;1,400&family=Orbitron:wght@700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <a href="index.html" class="logo">
+        <img src="assets/kedailida Logo Variations-07 2.png" alt="Kedailida">
+      </a>
+      <nav class="nav-wrap" id="navWrap">
+        <a href="index.html" class="nav-wrap-logo">
+          <img src="assets/kedailida Logo Variations-07 2.png" alt="Kedailida">
+        </a>
+        <ul class="nav-links">
+          <li class="nav-home-link"><a href="index.html">Home</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="services.html" class="active">Services</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="careers.html">Jobs</a></li>
+        </ul>
+      </nav>
+      <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <a href="start-project.html" class="btn-nav-cta">Start Project</a>
+    </div>
+  </header>
+
+  <section class="explore-frame">
+    <img id="exploreImg" src="" alt="" class="explore-bg">
+    <div class="explore-fade"></div>
+
+    <div class="explore-tabs-glass" id="exploreTabs">
+      <div class="explore-tab-indicator" id="tabIndicator"></div>
+      <button class="explore-tab active" data-index="0">Basic Comic</button>
+      <button class="explore-tab" data-index="1">Standard Comic</button>
+      <button class="explore-tab" data-index="2">Premium Comic</button>
+    </div>
+
+    <div class="explore-body" id="exploreBody">
+
+      <div class="explore-content">
+        <span class="explore-tag" id="exploreTag">COMIC BOOK ILLUSTRATION</span>
+        <h1 class="explore-title" id="exploreTitle"></h1>
+      </div>
+
+      <a href="#" class="explore-btn" id="getThisBtn">Get This →</a>
+
+      <div class="glass-includes">
+        <h4>Includes</h4>
+        <ul id="exploreIncludes"></ul>
+      </div>
+
+      <div class="glass-bestfor">
+        <h4>Best For</h4>
+        <ul id="exploreBestFor"></ul>
+      </div>
+
+      <div class="glass-deliverables">
+        <span><b>Deliverables:</b> <span id="exploreDeliverables"></span></span>
+      </div>
+
+    </div>
+  </section>
+
+  <script src="js/comic-books.js"></script>
+  <script src="js/nav-mobile.js"></script>
+</body>
+</html>

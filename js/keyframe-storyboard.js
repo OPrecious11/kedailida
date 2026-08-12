@@ -4,7 +4,7 @@ const packages = [
   {
     title: "BASIC STORYBOARD PACKAGE",
     dropdownValue: "Basic Storyboard Package",
-    image: "assets/keyframe-basic.jpg",
+    image: "assets/Abel Illustration.jpg",
     includes: [
       "20 Rough Storyboard Frames",
       "Basic Camera Composition",
@@ -24,7 +24,7 @@ const packages = [
   {
     title: "STANDARD KEYFRAME PACKAGE",
     dropdownValue: "Standard Keyframe Package",
-    image: "assets/keyframe-standard.jpg",
+    image: "assets/M_ralda Illustration.jpg",
     includes: [
       "20 Rough cinematic storyboard keyframe illustrations",
       "Shot composition development",
@@ -44,7 +44,7 @@ const packages = [
   {
     title: "PREMIUM CINEMATIC PACKAGE",
     dropdownValue: "Premium Cinematic Package",
-    image: "assets/keyframe-premium.jpg",
+    image: "assets/Painting Study 25-06-23 copy.jpg",
     includes: [
       "20 fully rendered cinematic keyframe sequence",
       "Advanced storyboarding",

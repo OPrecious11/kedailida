@@ -1062,7 +1062,7 @@
 .explore-fade {
   position: absolute;
   inset: 0;
-  background: linear-gradient(90deg, #0B0908 8%, transparent 45%);
+  background: linear-gradient(90deg, #0B0908 1%, transparent 50%);
 }
 
 .explore-tabs-glass {
@@ -1152,10 +1152,11 @@
   z-index: 3;
   width: 260px;
   text-align: center;
+  border-radius: 100px;
   border: 1.5px solid var(--rust-bright);
   color: var(--rust-bright);
   font-family: var(--font-ui);
-  font-size: 13px;
+  font-size: 20px;
   letter-spacing: 2px;
   text-transform: uppercase;
   padding: 14px 0;
@@ -1255,14 +1256,32 @@
 }
 
 @media (max-width: 900px) {
+  .explore-frame {
+    height: auto;
+    min-height: 100vh;
+    overflow-y: auto;
+  }
   .explore-content { padding: 140px 32px 0; max-width: 100%; }
   .explore-title { font-size: 32px; }
+  .explore-btn {
+    position: relative;
+    z-index: 2;
+    display: block;
+    width: calc(100% - 64px);
+    margin: 20px 32px 0;
+    text-align: center;
+  }
   .glass-includes, .glass-bestfor {
     position: static;
     width: auto;
     margin: 16px 32px;
   }
-  .glass-deliverables { left: 32px; right: 32px; }
+  .glass-deliverables {
+    position: static;
+    left: auto;
+    right: auto;
+    margin: 16px 32px 32px;
+  }
 }
 
 .bullet-icon {
@@ -2453,9 +2472,9 @@
     background: conic-gradient(
       from 0deg,
       transparent 0%,
-      var(--rust-bright) 10%,
-      var(--gold) 16%,
-      transparent 30%,
+      var(--rust-bright) 15%,
+      var(--gold) 22%,
+      transparent 38%,
       transparent 100%
     );
     filter: blur(40px);
@@ -2470,9 +2489,9 @@
     background: conic-gradient(
       from 0deg,
       transparent 0%,
-      var(--rust-bright) 12%,
-      var(--gold) 18%,
-      transparent 32%,
+      var(--rust-bright) 15%,
+      var(--gold) 22%,
+      transparent 38%,
       transparent 100%
     );
     animation: traceRotate 5s linear infinite;
@@ -3189,3 +3208,56 @@
     flex: none;
   }
 }
+
+/* ============================================
+   Explore mobile fix — placed last to guarantee it wins
+   ============================================ */
+   @media (max-width: 900px) {
+    .explore-frame {
+      height: auto !important;
+      min-height: 100vh;
+      overflow-y: auto;
+    }
+  
+    .explore-content {
+      padding: 140px 32px 0 !important;
+      max-width: 100% !important;
+    }
+  
+    .explore-title {
+      font-size: 32px !important;
+    }
+  
+    .explore-btn {
+      position: relative !important;
+      top: auto !important;
+      right: auto !important;
+      bottom: auto !important;
+      left: auto !important;
+      z-index: 2;
+      display: block;
+      width: calc(100% - 64px);
+      margin: 20px 32px 0 !important;
+      text-align: center;
+    }
+  
+    .glass-includes,
+    .glass-bestfor {
+      position: static !important;
+      top: auto !important;
+      bottom: auto !important;
+      left: auto !important;
+      right: auto !important;
+      width: auto !important;
+      margin: 16px 32px !important;
+    }
+  
+    .glass-deliverables {
+      position: static !important;
+      top: auto !important;
+      bottom: auto !important;
+      left: auto !important;
+      right: auto !important;
+      margin: 16px 32px 32px !important;
+    }
+  }

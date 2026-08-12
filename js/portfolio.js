@@ -1,12 +1,15 @@
 const portfolioData = [
-    { name: "Water Goddess", tag: "Character Design", category: "character", image: "assets/Water Goddess Exclusive .jpg", stats: { detail: 92, complexity: 80, color: 88 } },
-    { name: "M_Ralda", tag: "Character Design", category: "character", image: "assets/M_ralda Illustration.jpg", stats: { detail: 88, complexity: 85, color: 90 } },
-    { name: "Angel Ascension", tag: "Character Design", category: "character", image: "assets/Angel Ascension copy.jpg", stats: { detail: 90, complexity: 75, color: 82 } },
+    { name: "Devil Hunter", tag: "Character Design", category: "character", image: "assets/CharacterDesign 03.jpg", stats: { detail: 92, complexity: 80, color: 88 } },
+    { name: "Mercenary", tag: "Keyframe & Storyboard", category: "keyframe", image: "assets/Painting Study 25-06-23 copy.jpg", stats: { detail: 85, complexity: 78, color: 86 } },
+    { name: "M_Ralda Body Representation", tag: "Character Design", category: "character", image: "assets/CharacterDesign 01.jpg", stats: { detail: 92, complexity: 80, color: 88 } },
+    { name: "Councilman", tag: "Keyframe & Storyboard", category: "keyframe", image: "assets/Character Councilman .jpg", stats: { detail: 95, complexity: 82, color: 92 } },
+    { name: "Devil Hunter", tag: "Character Design", category: "character", image: "assets/CharacterDesign 02.jpg", stats: { detail: 92, complexity: 80, color: 88 } },
     { name: "Abel", tag: "Keyframe & Storyboard", category: "keyframe", image: "assets/Abel illustration.jpg", stats: { detail: 78, complexity: 88, color: 70 } },
+    { name: "Kedailida Woman", tag: "Character Design", category: "character", image: "assets/CharacterDesign 04.jpg", stats: { detail: 92, complexity: 80, color: 88 } },
+    { name: "M_Ralda", tag: "Keyframe & Storyboard", category: "keyframe", image: "assets/M_ralda Illustration.jpg", stats: { detail: 88, complexity: 85, color: 90 } },
     { name: "Councilman", tag: "Promotional", category: "promotional", image: "assets/Character Councilman .jpg", stats: { detail: 95, complexity: 82, color: 92 } },
     { name: "Mercenary", tag: "Book Cover", category: "bookcover", image: "assets/Painting Study 25-06-23 copy.jpg", stats: { detail: 85, complexity: 78, color: 86 } },
     { name: "Mercenary II", tag: "Comic Books", category: "comic", image: "assets/Painting Study 25-06-23 copy.jpg", stats: { detail: 80, complexity: 90, color: 75 } },
-    { name: "Mercenary III", tag: "Character Design", category: "character", image: "assets/Painting Study 25-06-23 copy.jpg", stats: { detail: 93, complexity: 87, color: 89 } }
   ];
   
   let currentFilter = 'all';
