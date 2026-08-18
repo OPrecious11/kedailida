@@ -6,7 +6,7 @@ const portfolioData = [
   { name: "Iron Verse #4", tag: "Comic Books", category: "comic", image: "assets/Abel Illustration.jpg" },
   { name: "Dailida", tag: "Character Design", category: "character", image: "assets/CharacterDesign 06(Dailida).jpg" },
   { name: "Devil Hunter", tag: "Character Design", category: "character", image: "assets/CharacterDesign 02.jpg" },
-  { name: "M_ralda", tag: "Character Design", category: "character", image: "assests/CharacterDesign 08.jpg" },
+  { name: "M_ralda", tag: "Character Design", category: "character", image: "assets/CharacterDesign 08.jpg" },
   { name: "Councilman", tag: "Keyframe & Storyboard", category: "keyframe", image: "assets/Character Councilman .jpg" },
   { name: "Angel", tag: "Keyframe & Storyboard", category: "keyframe", image: "assets/Angel Ascension copy.jpg" },
   { name: "Goddess", tag: "Character Design", category: "character", image: "assets/NewCharacter.jpg" },
