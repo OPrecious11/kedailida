@@ -1,101 +1,118 @@
 const portfolioData = [
-    { name: "Devil Hunter", tag: "Character Design", category: "character", image: "assets/CharacterDesign 03.jpg", stats: { detail: 92, complexity: 80, color: 88 } },
-    { name: "Mercenary", tag: "Keyframe & Storyboard", category: "keyframe", image: "assets/Painting Study 25-06-23 copy.jpg", stats: { detail: 85, complexity: 78, color: 86 } },
-    { name: "M_Ralda Body Representation", tag: "Character Design", category: "character", image: "assets/CharacterDesign 01.jpg", stats: { detail: 92, complexity: 80, color: 88 } },
-    { name: "Councilman", tag: "Keyframe & Storyboard", category: "keyframe", image: "assets/Character Councilman .jpg", stats: { detail: 95, complexity: 82, color: 92 } },
-    { name: "Devil Hunter", tag: "Character Design", category: "character", image: "assets/CharacterDesign 02.jpg", stats: { detail: 92, complexity: 80, color: 88 } },
-    { name: "Abel", tag: "Keyframe & Storyboard", category: "keyframe", image: "assets/Abel illustration.jpg", stats: { detail: 78, complexity: 88, color: 70 } },
-    { name: "Kedailida Woman", tag: "Character Design", category: "character", image: "assets/CharacterDesign 04.jpg", stats: { detail: 92, complexity: 80, color: 88 } },
-    { name: "M_Ralda", tag: "Keyframe & Storyboard", category: "keyframe", image: "assets/M_ralda Illustration.jpg", stats: { detail: 88, complexity: 85, color: 90 } },
-    { name: "Councilman", tag: "Promotional", category: "promotional", image: "assets/Character Councilman .jpg", stats: { detail: 95, complexity: 82, color: 92 } },
-    { name: "Mercenary", tag: "Book Cover", category: "bookcover", image: "assets/Painting Study 25-06-23 copy.jpg", stats: { detail: 85, complexity: 78, color: 86 } },
-    { name: "Mercenary II", tag: "Comic Books", category: "comic", image: "assets/Painting Study 25-06-23 copy.jpg", stats: { detail: 80, complexity: 90, color: 75 } },
-  ];
-  
-  let currentFilter = 'all';
-  let currentIndex = 0;
-  
-  const filmstrip = document.getElementById('charFilmstrip');
-  const previewImg = document.getElementById('previewImg');
-  const previewTag = document.getElementById('previewTag');
-  const previewName = document.getElementById('previewName');
-  const statDetailFill = document.getElementById('statDetailFill');
-  const statDetailVal = document.getElementById('statDetailVal');
-  const statComplexityFill = document.getElementById('statComplexityFill');
-  const statComplexityVal = document.getElementById('statComplexityVal');
-  const statColorFill = document.getElementById('statColorFill');
-  const statColorVal = document.getElementById('statColorVal');
-  const filterButtons = document.querySelectorAll('.cs-filter-btn');
-  const filterIndicator = document.getElementById('filterIndicator');
+  { name: "Abel", tag: "Keyframe & Storyboard", category: "keyframe", image: "assets/Abel Illustration.jpg" },
+  { name: "M_ralda", tag: "Keyframe & Storyboard", category: "keyframe", image: "assets/M_ralda Illustration.jpg" },
+  { name: "Jyamelah", tag: "Promotional", category: "promotional", image: "assets/Jyamelah- Pin up.jpg" },
+  { name: "Realm of Ash", tag: "Book Cover", category: "bookcover", image: "assets/Abel Illustration.jpg" },
+  { name: "Iron Verse #4", tag: "Comic Books", category: "comic", image: "assets/Abel Illustration.jpg" },
+  { name: "Dailida", tag: "Character Design", category: "character", image: "assets/CharacterDesign 06(Dailida).jpg" },
+  { name: "Devil Hunter", tag: "Character Design", category: "character", image: "assets/CharacterDesign 02.jpg" },
+  { name: "M_ralda", tag: "Character Design", category: "character", image: "assests/CharacterDesign 08.jpg" },
+  { name: "Councilman", tag: "Keyframe & Storyboard", category: "keyframe", image: "assets/Character Councilman .jpg" },
+  { name: "Angel", tag: "Keyframe & Storyboard", category: "keyframe", image: "assets/Angel Ascension copy.jpg" },
+  { name: "Goddess", tag: "Character Design", category: "character", image: "assets/NewCharacter.jpg" },
+  { name: "Goddess", tag: "Keyframe & Storyboard", category: "keyframe", image: "assets/Water Goddess Exclusive .jpg" },
+  { name: "Mercenary", tag: "Keyframe & Storyboard", category: "keyframe", image: "assets/Painting Study 25-06-23 copy.jpg" },
+];
 
-  function moveFilterIndicator(activeBtn) {
-    filterIndicator.style.width = activeBtn.offsetWidth + 'px';
-    filterIndicator.style.transform = `translateX(${activeBtn.offsetLeft - 6}px)`;
-  }
-  
-  function getFilteredData() {
-    return currentFilter === 'all'
-      ? portfolioData
-      : portfolioData.filter(item => item.category === currentFilter);
-  }
-  
-  function renderFilmstrip() {
-    const data = getFilteredData();
-    filmstrip.innerHTML = '';
-  
-    data.forEach((item, i) => {
-      const thumb = document.createElement('div');
-      thumb.className = 'char-thumb' + (i === currentIndex ? ' active' : '');
-      thumb.innerHTML = `<img src="${item.image}" alt="${item.name}">`;
-      thumb.addEventListener('click', () => {
-        currentIndex = i;
-        updatePreview();
-        renderFilmstrip();
-      });
-      filmstrip.appendChild(thumb);
-    });
-  }
-  
-  function updatePreview() {
-    const data = getFilteredData();
-    if (!data.length) return;
-    const item = data[currentIndex] || data[0];
-  
-    previewImg.style.opacity = 0;
-    setTimeout(() => {
-      previewImg.src = item.image;
-      previewTag.textContent = `${item.tag} — ${String(currentIndex + 1).padStart(2, '0')}/${String(data.length).padStart(2, '0')}`;
-      previewName.textContent = item.name;
-      previewImg.style.opacity = 1;
-  
-      statDetailFill.style.width = item.stats.detail + '%';
-      statDetailVal.textContent = item.stats.detail + '%';
-      statComplexityFill.style.width = item.stats.complexity + '%';
-      statComplexityVal.textContent = item.stats.complexity + '%';
-      statColorFill.style.width = item.stats.color + '%';
-      statColorVal.textContent = item.stats.color + '%';
-    }, 200);
-  }
-  
-  filterButtons.forEach(btn => {
-    btn.addEventListener('click', () => {
-      filterButtons.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      currentFilter = btn.dataset.filter;
-      currentIndex = 0;
-      renderFilmstrip();
-      updatePreview();
-      moveFilterIndicator(btn);
-    });
+const grid = document.getElementById('galleryGrid');
+const filterBtns = document.querySelectorAll('.gallery-filter-btn');
+const filterIndicator = document.getElementById('filterIndicator');
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightboxImg');
+const lightboxTag = document.getElementById('lightboxTag');
+const lightboxName = document.getElementById('lightboxName');
+const lightboxClose = document.getElementById('lightboxClose');
+const lightboxPrev = document.getElementById('lightboxPrev');
+const lightboxNext = document.getElementById('lightboxNext');
+
+let visibleIndices = portfolioData.map((_, i) => i);
+let currentPos = 0;
+
+function renderGrid() {
+  grid.innerHTML = portfolioData.map((item, i) => `
+    <div class="gallery-item" data-category="${item.category}" data-index="${i}">
+      <img src="${item.image}" alt="${item.name}">
+      <div class="gallery-item-caption">
+        <span>${item.tag}</span>
+        <h4>${item.name}</h4>
+      </div>
+    </div>
+  `).join('');
+
+  document.querySelectorAll('.gallery-item').forEach(el => {
+    el.addEventListener('click', () => openLightbox(parseInt(el.dataset.index)));
   });
+}
 
-  const statsGlass = document.getElementById('charStatsGlass');
-  const statsToggle = document.getElementById('charStatsToggle');
+function updateVisibleIndices(filter) {
+  visibleIndices = portfolioData
+    .map((item, i) => ({ item, i }))
+    .filter(({ item }) => filter === 'all' || item.category === filter)
+    .map(({ i }) => i);
+}
 
-statsToggle.addEventListener('click', () => {
-  statsGlass.classList.toggle('expanded');
+function showAtPos(pos) {
+  currentPos = pos;
+  const item = portfolioData[visibleIndices[currentPos]];
+  lightboxImg.src = item.image;
+  lightboxTag.textContent = item.tag;
+  lightboxName.textContent = item.name;
+}
+
+function openLightbox(index) {
+  currentPos = visibleIndices.indexOf(index);
+  if (currentPos === -1) currentPos = 0;
+  showAtPos(currentPos);
+  lightbox.classList.add('open');
+}
+
+function closeLightbox() {
+  lightbox.classList.remove('open');
+}
+
+function nextImage() {
+  showAtPos((currentPos + 1) % visibleIndices.length);
+}
+
+function prevImage() {
+  showAtPos((currentPos - 1 + visibleIndices.length) % visibleIndices.length);
+}
+
+lightboxClose.addEventListener('click', closeLightbox);
+lightboxNext.addEventListener('click', nextImage);
+lightboxPrev.addEventListener('click', prevImage);
+
+lightbox.addEventListener('click', (e) => {
+  if (e.target === lightbox) closeLightbox();
 });
 
-moveFilterIndicator(filterButtons[0]);
-  renderFilmstrip();
-  updatePreview();
+document.addEventListener('keydown', (e) => {
+  if (!lightbox.classList.contains('open')) return;
+  if (e.key === 'Escape') closeLightbox();
+  if (e.key === 'ArrowRight') nextImage();
+  if (e.key === 'ArrowLeft') prevImage();
+});
+
+function moveFilterIndicator(activeBtn) {
+  filterIndicator.style.width = activeBtn.offsetWidth + 'px';
+  filterIndicator.style.transform = `translateX(${activeBtn.offsetLeft - 6}px)`;
+}
+
+filterBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    filterBtns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    moveFilterIndicator(btn);
+
+    const filter = btn.dataset.filter;
+    updateVisibleIndices(filter);
+
+    document.querySelectorAll('.gallery-item').forEach(item => {
+      const match = filter === 'all' || item.dataset.category === filter;
+      item.classList.toggle('hidden', !match);
+    });
+  });
+});
+
+renderGrid();
+moveFilterIndicator(filterBtns[0]);

@@ -8,7 +8,6 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Jost:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
@@ -18,72 +17,44 @@
         <img src="assets/kedailida Logo Variations-07 2.png" alt="Kedailida">
       </a>
       <nav class="nav-wrap" id="navWrap">
+        <a href="index.html" class="nav-wrap-logo">
+          <img src="assets/kedailida Logo Variations-07 2.png" alt="Kedailida">
+        </a>
         <ul class="nav-links">
-                    <li class="nav-home-link"><a href="index.html">Home</a></li>
+          <li class="nav-home-link"><a href="index.html">Home</a></li>
           <li><a href="portfolio.html" class="active">Portfolio</a></li>
           <li><a href="services.html">Services</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="contact.html">Contact</a></li>
-                  <li><a href="careers.html">Jobs</a></li>
+          <li><a href="careers.html">Jobs</a></li>
         </ul>
       </nav>
-            <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle menu">
+      <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle menu">
         <span></span><span></span><span></span>
       </button>
-<a href="start-project.html" class="btn-nav-cta">Start Project</a>
+      <a href="start-project.html" class="btn-nav-cta">Start Project</a>
     </div>
   </header>
 
   <div class="page-scroll">
-    <section class="char-select">
 
-    
-      <div class="char-select-main">
-        <div class="char-preview" id="charPreview">
-          <img id="previewImg" src="" alt="">
-          <div class="preview-info">
-            <span id="previewTag"></span>
-            <h2 id="previewName"></h2>
-          </div>
-    
-          <div class="cs-filters-glass" id="csFilters">
-            <div class="cs-filter-indicator" id="filterIndicator"></div>
-            <button class="cs-filter-btn active" data-filter="all">All</button>
-            <button class="cs-filter-btn" data-filter="character">Character Designs</button>
-            <button class="cs-filter-btn" data-filter="keyframe">Keyframe &amp; Storyboard</button>
-            <button class="cs-filter-btn" data-filter="promotional">Promotional</button>
-            <button class="cs-filter-btn" data-filter="bookcover">Book Cover</button>
-            <button class="cs-filter-btn" data-filter="comic">Comic Books</button>
-          </div>
-    
-          <div class="char-stats-glass" id="charStatsGlass">
-            <button class="char-stats-toggle" id="charStatsToggle">
-              <span>Stats</span>
-              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
-            </button>
-    
-            <div class="char-stats-body" id="charStatsBody">
-              <div class="stat">
-                <div class="label"><span>Detail</span><span id="statDetailVal">—</span></div>
-                <div class="track"><div class="fill" id="statDetailFill"></div></div>
-              </div>
-              <div class="stat">
-                <div class="label"><span>Complexity</span><span id="statComplexityVal">—</span></div>
-                <div class="track"><div class="fill" id="statComplexityFill"></div></div>
-              </div>
-              <div class="stat">
-                <div class="label"><span>Color Work</span><span id="statColorVal">—</span></div>
-                <div class="track"><div class="fill" id="statColorFill"></div></div>
-              </div>
-            </div>
-          </div>
-        </div>
+    <section class="gallery-page">
+      <div class="gallery-header">
+        <span class="cs-eyebrow">Our Work</span>
+        <h1 class="cs-title">Portfolio</h1>
       </div>
-    
-      <div class="char-filmstrip-wrap">
-        <div class="char-filmstrip" id="charFilmstrip"></div>
+
+      <div class="gallery-filters" id="galleryFilters">
+        <div class="gallery-filter-indicator" id="filterIndicator"></div>
+        <button class="gallery-filter-btn active" data-filter="all">All</button>
+        <button class="gallery-filter-btn" data-filter="character">Character Designs</button>
+        <button class="gallery-filter-btn" data-filter="keyframe">Keyframe &amp; Storyboard</button>
+        <button class="gallery-filter-btn" data-filter="promotional">Promotional</button>
+        <button class="gallery-filter-btn" data-filter="bookcover">Book Cover</button>
+        <button class="gallery-filter-btn" data-filter="comic">Comic Books</button>
       </div>
-    
+
+      <div class="gallery-grid" id="galleryGrid"></div>
     </section>
 
     <footer class="site-footer-dark">
@@ -97,18 +68,16 @@
           </form>
           <p class="footer-newsletter-note">We respect your inbox and handle your data with care.</p>
         </div>
-
         <div class="footer-links">
           <h4>Navigate</h4>
           <ul>
-            <li class="nav-home-link"><a href="index.html">Home</a></li>
+            <li><a href="index.html">Home</a></li>
             <li><a href="portfolio.html">Portfolio</a></li>
             <li><a href="services.html">Services</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="contact.html">Contact</a></li>
           </ul>
         </div>
-
         <div class="footer-links">
           <h4>Company</h4>
           <ul>
@@ -117,7 +86,6 @@
           </ul>
         </div>
       </div>
-
       <div class="container footer-dark-bottom">
         <p>© 2026 Kedailida. All rights reserved.</p>
         <div class="footer-legal">
@@ -126,10 +94,28 @@
         </div>
       </div>
     </footer>
+
+  </div>
+
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close">&times;</button>
+    <button class="lightbox-arrow lightbox-prev" id="lightboxPrev" aria-label="Previous">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"></polyline></svg>
+    </button>
+    <button class="lightbox-arrow lightbox-next" id="lightboxNext" aria-label="Next">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+    </button>
+    <div class="lightbox-content">
+      <img id="lightboxImg" src="" alt="">
+      <div class="lightbox-info">
+        <span id="lightboxTag"></span>
+        <h2 id="lightboxName"></h2>
+      </div>
+    </div>
   </div>
 
   <script src="js/portfolio.js"></script>
+  <script src="js/nav-mobile.js"></script>
   <script src="js/scroll-reveal.js"></script>
-<script src="js/nav-mobile.js"></script>
 </body>
 </html>
