@@ -9,6 +9,8 @@ const portfolioData = [
   { name: "All Character", tag: "Book Cover", category: "bookcover", image: "assets/Book.png" },
   { name: "Iron Verse #4", tag: "Comic Books", category: "comic", image: "assets/Abel Illustration.jpg" },
   { name: "Dailida", tag: "Character Design", category: "character", image: "assets/CharacterDesign 06(Dailida).jpg" },
+  { name: "Abel", tag: "Character Design", category: "character", image: "assets/Abel Detailed.jpg" },
+  { name: "J'yamelah", tag: "Character Design", category: "character", image: "assets/J'yamelah Detailed.jpg" },
   { name: "Devil Hunter", tag: "Character Design", category: "character", image: "assets/CharacterDesign 02.jpg" },
   { name: "Devil Hunter", tag: "Character Design", category: "character", image: "assets/CharacterDesign 03.jpg" },
   { name: "Abel", tag: "Character Design", category: "character", image: "assets/Abel2.0.jpg" },
