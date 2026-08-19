@@ -2,6 +2,8 @@ const portfolioData = [
   { name: "Abel", tag: "Keyframe & Storyboard", category: "keyframe", image: "assets/Abel Illustration.jpg" },
   { name: "M_ralda", tag: "Keyframe & Storyboard", category: "keyframe", image: "assets/M_ralda Illustration.jpg" },
   { name: "M_ralda", tag: "Keyframe & Storyboard", category: "keyframe", image: "assets/New Keyframe.jpg" },
+  { name: "Xaona", tag: "Keyframe & Storyboard", category: "keyframe", image: "assets/New Keyframe2.jpg" },
+  { name: "Xaona", tag: "Promotional", category: "promotional", image: "assets/New Keyframe2.jpg" },
   { name: "M_ralda", tag: "Promotional", category: "promotional", image: "assets/New Keyframe.jpg" },
   { name: "Jyamelah", tag: "Promotional", category: "promotional", image: "assets/Jyamelah- Pin up.jpg" },
   { name: "All Character", tag: "Book Cover", category: "bookcover", image: "assets/Book.png" },
