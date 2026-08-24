@@ -3214,9 +3214,9 @@
    ============================================ */
    @media (max-width: 900px) {
     .explore-frame {
-      height: auto !important;
+      height: 100vh !important;
       min-height: 100vh;
-      overflow-y: auto;
+      overflow-y: auto !important;
     }
   
     .explore-content {
@@ -3326,15 +3326,14 @@
 }
 
 .gallery-grid {
-  column-count: 4;
-  column-gap: 18px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
 }
 
 .gallery-item {
   position: relative;
-  break-inside: avoid;
-  margin-bottom: 18px;
-  border-radius: 8px;
+  border-radius: 12px;
   overflow: hidden;
   cursor: pointer;
   background: #111;
@@ -3389,15 +3388,9 @@
 }
 
 @media (max-width: 900px) {
-  .gallery-page {
-    padding: 32px 24px 40px;
-  }
   .gallery-grid {
-    column-count: 2;
-    column-gap: 12px;
-  }
-  .gallery-item {
-    margin-bottom: 12px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
   }
 }
 
@@ -3538,5 +3531,81 @@
   .lightbox-close {
     top: 16px;
     right: 16px;
+  }
+}
+
+.portfolio-hero {
+  position: relative;
+  padding: 80px 64px 48px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.portfolio-hero-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 20%;
+  opacity: 0.5;
+}
+
+.portfolio-hero-fade {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at center, rgba(11,9,8,0.3) 30%, rgba(11,9,8,0.9) 100%);
+}
+
+.portfolio-hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.portfolio-hero-content h1 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 44px;
+  color: var(--white);
+}
+
+@media (max-width: 900px) {
+  .portfolio-hero {
+    padding: 56px 24px 32px;
+  }
+  .portfolio-hero-content h1 {
+    font-size: 32px;
+  }
+}
+
+.gallery-empty {
+  display: none;
+  text-align: center;
+  padding: 100px 24px;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.gallery-empty.show {
+  display: block;
+}
+
+.gallery-empty h3 {
+  font-family: var(--font-display);
+  font-size: 28px;
+  color: var(--white);
+  margin-bottom: 16px;
+}
+
+.gallery-empty p {
+  font-family: var(--font-body);
+  font-size: 15px;
+  color: rgba(255,255,255,0.6);
+  margin-bottom: 32px;
+}
+
+@media (max-width: 900px) {
+  .gallery-empty {
+    padding: 60px 24px;
   }
 }

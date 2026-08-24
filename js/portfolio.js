@@ -2,12 +2,10 @@ const portfolioData = [
   { name: "Abel", tag: "Keyframe & Storyboard", category: "keyframe", image: "assets/Abel Illustration.jpg" },
   { name: "M_ralda", tag: "Keyframe & Storyboard", category: "keyframe", image: "assets/M_ralda Illustration.jpg" },
   { name: "M_ralda", tag: "Keyframe & Storyboard", category: "keyframe", image: "assets/New Keyframe.jpg" },
-  { name: "Xaona", tag: "Keyframe & Storyboard", category: "keyframe", image: "assets/New Keyframe2.jpg" },
-  { name: "Xaona", tag: "Promotional", category: "promotional", image: "assets/New Keyframe2.jpg" },
+  { name: "Jyamelah and Jha'kendr", tag: "Keyframe & Storyboard", category: "keyframe", image: "assets/New Keyframe2.jpg" },
+  { name: "Jyamelah and Jha'kendr", tag: "Promotional", category: "promotional", image: "assets/New Keyframe2.jpg" },
   { name: "M_ralda", tag: "Promotional", category: "promotional", image: "assets/New Keyframe.jpg" },
   { name: "Jyamelah", tag: "Promotional", category: "promotional", image: "assets/Jyamelah- Pin up.jpg" },
-  { name: "All Character", tag: "Book Cover", category: "bookcover", image: "assets/Book.png" },
-  { name: "Iron Verse #4", tag: "Comic Books", category: "comic", image: "assets/Abel Illustration.jpg" },
   { name: "Dailida", tag: "Character Design", category: "character", image: "assets/CharacterDesign 06(Dailida).jpg" },
   { name: "Abel", tag: "Character Design", category: "character", image: "assets/Abel Detailed.jpg" },
   { name: "J'yamelah", tag: "Character Design", category: "character", image: "assets/J'yamelah Detailed.jpg" },
@@ -33,6 +31,14 @@ const lightboxName = document.getElementById('lightboxName');
 const lightboxClose = document.getElementById('lightboxClose');
 const lightboxPrev = document.getElementById('lightboxPrev');
 const lightboxNext = document.getElementById('lightboxNext');
+const galleryGrid = document.getElementById('galleryGrid');
+const galleryEmpty = document.getElementById('galleryEmpty');
+const galleryEmptyBtn = document.getElementById('galleryEmptyBtn');
+
+const emptyStateDisciplines = {
+  bookcover: { discipline: "bookcover", package: "Basic Illustration Package" },
+  comic: { discipline: "comic", package: "Basic Comic Package" }
+};
 
 let visibleIndices = portfolioData.map((_, i) => i);
 let currentPos = 0;
@@ -116,10 +122,20 @@ filterBtns.forEach(btn => {
     const filter = btn.dataset.filter;
     updateVisibleIndices(filter);
 
-    document.querySelectorAll('.gallery-item').forEach(item => {
-      const match = filter === 'all' || item.dataset.category === filter;
-      item.classList.toggle('hidden', !match);
-    });
+    if (emptyStateDisciplines[filter]) {
+      galleryGrid.style.display = 'none';
+      galleryEmpty.classList.add('show');
+      const { discipline, package: pkg } = emptyStateDisciplines[filter];
+      galleryEmptyBtn.href = `start-project.html?discipline=${discipline}&package=${encodeURIComponent(pkg)}`;
+    } else {
+      galleryGrid.style.display = 'grid';
+      galleryEmpty.classList.remove('show');
+
+      document.querySelectorAll('.gallery-item').forEach(item => {
+        const match = filter === 'all' || item.dataset.category === filter;
+        item.classList.toggle('hidden', !match);
+      });
+    }
   });
 });
 
