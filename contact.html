@@ -70,7 +70,7 @@
         <p class="contact-note">Looking to commission a project instead? <a href="start-project.html">Start a Project →</a></p>
       </div>
 
-      <form class="contact-message-glass" id="contactMessageForm" action="https://formspree.io/f/YOUR_CONTACT_FORM_ID" method="POST">
+      <form class="contact-message-glass" id="contactMessageForm" action="https://formspree.io/f/xwlkkvap" method="POST">
         <div class="field">
           <label for="name">Name</label>
           <input type="text" name="name" id="name" placeholder="Your name" required>
@@ -93,10 +93,11 @@
         <div class="footer-brand">
           <img src="assets/kedailida Logo 02.png" alt="Kedailida" class="footer-logo">
           <p class="footer-newsletter-label">Get news on studio updates.</p>
-          <form class="footer-newsletter-form">
-            <input type="email" placeholder="Email" required>
-            <button type="submit">Join</button>
-          </form>
+          <form class="footer-newsletter-form" id="newsletterForm" action="https://formspree.io/f/meaqekkg" method="POST">
+              <input type="email" name="email" placeholder="Email" required>
+              <button type="submit">Join</button>
+            </form>
+            <p class="newsletter-status" id="newsletterStatus"></p>
           <p class="footer-newsletter-note">We respect your inbox and handle your data with care.</p>
         </div>
         <div class="footer-links">
@@ -131,5 +132,6 @@
   <script src="js/contact.js"></script>
   <script src="js/nav-mobile.js"></script>
   <script src="js/scroll-reveal.js"></script>
+<script src="js/newsletter.js"></script>
 </body>
 </html>

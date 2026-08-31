@@ -3609,3 +3609,12 @@
     padding: 60px 24px;
   }
 }
+
+.newsletter-status {
+  margin-top: 8px;
+  font-family: var(--font-ui);
+  font-size: 12px;
+}
+
+.newsletter-status.success { color: #7FB88A; }
+.newsletter-status.error { color: #D97070; }

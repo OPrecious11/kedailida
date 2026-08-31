@@ -55,10 +55,11 @@
         <div class="footer-brand">
           <img src="assets/kedailida Logo 02.png" alt="Kedailida" class="footer-logo">
           <p class="footer-newsletter-label">Get news on studio updates.</p>
-          <form class="footer-newsletter-form">
-            <input type="email" placeholder="Email" required>
-            <button type="submit">Join</button>
-          </form>
+          <form class="footer-newsletter-form" id="newsletterForm" action="https://formspree.io/f/meaqekkg" method="POST">
+              <input type="email" name="email" placeholder="Email" required>
+              <button type="submit">Join</button>
+            </form>
+            <p class="newsletter-status" id="newsletterStatus"></p>
           <p class="footer-newsletter-note">We respect your inbox and handle your data with care.</p>
         </div>
 
@@ -96,5 +97,6 @@
   <script src="js/careers.js"></script>
   <script src="js/scroll-reveal.js"></script>
 <script src="js/nav-mobile.js"></script>
+<script src="js/newsletter.js"></script>
 </body>
 </html>
