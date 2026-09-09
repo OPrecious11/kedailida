@@ -278,13 +278,63 @@
 }
 
 .hero-title {
-  font-family: var(--font-display);
-  font-weight: 700;
-  font-size: 60px;
-  line-height: 1.15;
+  font-family: 'Archivo Black', sans-serif;
+  font-weight: 900;
   color: var(--white);
   margin-bottom: 40px;
-  text-shadow: 0 2px 24px rgba(0,0,0,0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 1.1;
+  letter-spacing: 1px;
+  /*text-shadow:
+    0 2px 24px rgba(0,0,0,0.3),
+    0 0 18px rgba(201,122,61,0.45),
+    0 0 36px rgba(201,122,61,0.25);*/
+}
+
+.hero-title-small {
+  font-weight: 500;
+  font-size: 36px;
+  margin-bottom: 16px;
+}
+
+.hero-title-big {
+  font-weight: 900;
+  font-size: 72px;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 160px;
+  background: linear-gradient(to bottom, transparent, #0B0908);
+  z-index: 2;
+  pointer-events: none;
+}
+
+.float-scene::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 160px;
+  background: linear-gradient(to bottom, #0B0908, transparent);
+  z-index: 1;
+  pointer-events: none;
+}
+
+@media (max-width: 900px) {
+  .hero-title-small {
+    font-size: 20px;
+  }
+  .hero-title-big {
+    font-size: 38px;
+  }
 }
 
 .hero .scroll-indicator {
@@ -304,6 +354,28 @@
   from { transform: scale(1); }
   to { transform: scale(1.08); }
 }
+
+/* ============================================================
+   FIX — allow the homepage to scroll through the footer
+   ============================================================ */
+
+   html:has(body.homepage) {
+    height: auto;
+    min-height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+  
+  body.homepage {
+    height: auto;
+    min-height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  body.homepage .homepage-embedded-footer {
+    overflow: visible;
+  }
   
   /* ============================================
      Footer (light — homepage, follows theme)
@@ -3535,10 +3607,8 @@
 }
 
 .portfolio-hero {
-  position: relative;
-  padding: 80px 64px 48px;
-  text-align: center;
-  overflow: hidden;
+  padding-top: 24px;
+  padding-bottom: 64px;
 }
 
 .portfolio-hero-bg {
@@ -3560,21 +3630,56 @@
 .portfolio-hero-content {
   position: relative;
   z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
 }
 
-.portfolio-hero-content h1 {
-  font-family: var(--font-display);
-  font-weight: 700;
-  font-size: 44px;
+.portfolio-hero-stamp {
+  width: 56px;
+  height: 56px;
+  flex-shrink: 0;
+}
+
+.portfolio-hero-titleblock {
+  position: relative;
+}
+
+.portfolio-hero-titleblock h1 {
+  font-family: 'Anton', sans-serif;
+  font-weight: 400;
+  font-size: 64px;
+  text-transform: uppercase;
   color: var(--white);
+  line-height: 1;
+}
+
+.portfolio-hero-caption {
+  position: absolute;
+  right: 4px;
+  bottom: -20px;
+  font-family: var(--font-ui);
+  font-size: 16px;
+  font-style: italic;
+  color: var(--rust-bright);
+  white-space: nowrap;
 }
 
 @media (max-width: 900px) {
-  .portfolio-hero {
-    padding: 56px 24px 32px;
+  .portfolio-hero-content {
+    gap: 12px;
   }
-  .portfolio-hero-content h1 {
-    font-size: 32px;
+  .portfolio-hero-stamp {
+    width: 36px;
+    height: 36px;
+  }
+  .portfolio-hero-titleblock h1 {
+    font-size: 36px;
+  }
+  .portfolio-hero-caption {
+    font-size: 11px;
+    bottom: -16px;
   }
 }
 
@@ -3618,3 +3723,331 @@
 
 .newsletter-status.success { color: #7FB88A; }
 .newsletter-status.error { color: #D97070; }
+
+/* ============================================
+   Transparent Nav (homepage only)
+   ============================================ */
+   .site-header.transparent-nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 50;
+    background: transparent;
+  }
+  
+  .site-header.transparent-nav .logo img {
+    filter: brightness(0) invert(1);
+  }
+  
+  .site-header.transparent-nav .nav-links a {
+    color: var(--white);
+  }
+  
+  .site-header.transparent-nav .nav-links a:hover {
+    color: var(--rust-bright);
+  }
+  
+  .site-header.transparent-nav .hamburger-btn span {
+    background: var(--white);
+  }
+  
+  @media (max-width: 900px) {
+    .site-header.transparent-nav .nav-wrap {
+      background: var(--page-surface);
+    }
+    .site-header.transparent-nav .nav-wrap .nav-links a {
+      color: var(--page-ink);
+    }
+  }
+
+  .scroll-indicator-up {
+    position: relative;
+    margin-top: 24px;
+    color: var(--white);
+  }
+  
+  @media (max-width: 900px) {
+    .scroll-indicator-up {
+      position: static;
+      margin: 16px auto 0;
+      transform: none;
+    }
+  }
+
+  .float-scene {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background: #0B0908;
+  }
+  
+  .float-cards-wrap {
+    position: relative;
+    z-index: 2;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+  }
+  
+  .homepage-embedded-footer {
+    position: relative;
+    z-index: 2;
+    flex-shrink: 0;
+  }
+
+/* ============================================================
+   KEDAILIDA HOMEPAGE UPDATE — natural scroll + boss composition
+   Scoped to the homepage only.
+   ============================================================ */
+
+/* The homepage is now a normal scrolling document. */
+body.homepage {
+  height: auto;
+  min-height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  display: block;
+}
+
+body.homepage .content-viewport {
+  height: auto;
+  min-height: 0;
+  overflow: visible;
+  position: relative;
+}
+
+body.homepage .snap-track {
+  height: auto;
+  min-height: 0;
+  transform: none;
+}
+
+body.homepage .snap-track > * {
+  height: auto;
+}
+
+/* ============================================================
+   HERO — full viewport + stacked/overlapping typography
+   ============================================================ */
+
+body.homepage .hero {
+  height: 100vh;
+  min-height: 100vh;
+  align-items: center;
+  padding-bottom: 0;
+}
+
+body.homepage .hero-content {
+  width: 100%;
+  max-width: 1200px;
+  transform: translateY(18px);
+}
+
+body.homepage .hero-title {
+  position: relative;
+  width: 100%;
+  margin-bottom: 34px;
+  display: block;
+  text-align: center;
+  line-height: 0.85;
+}
+
+body.homepage .hero-title-small {
+  display: block;
+  position: relative;
+  z-index: 2;
+  font-family: 'Anton', sans-serif;
+  font-size: clamp(42px, 5.4vw, 78px);
+  line-height: 0.95;
+  letter-spacing: 1px;
+  white-space: nowrap;
+  transform: translateY(13px);
+}
+
+body.homepage .hero-title-big {
+  display: block;
+  position: relative;
+  z-index: 1;
+  font-family: 'Anton', sans-serif;
+  font-size: clamp(100px, 13vw, 190px);
+  line-height: 0.78;
+  letter-spacing: -3px;
+  margin-top: 0;
+  white-space: nowrap;
+}
+
+/* The word NEW stays in the smaller line, matching the sketch. */
+body.homepage .hero-title-new {
+  display: inline;
+}
+
+body.homepage .btn-hero-cta {
+  position: relative;
+  z-index: 5;
+}
+
+/* ============================================================
+   SECOND SECTION — cards first, footer continues below
+   ============================================================ */
+
+body.homepage .float-scene {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  min-height: 100vh;
+  height: auto;
+  overflow: visible;
+  background: #0B0908 url('../assets/Angel Ascension copy.jpg') center center / cover no-repeat;
+}
+
+/* Use the scene itself as the continuous artwork surface so the
+   image naturally continues behind the footer. */
+body.homepage .float-scene-bg {
+  display: none;
+}
+
+body.homepage .float-scene-overlay {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+body.homepage .float-cards-wrap {
+  position: relative;
+  z-index: 2;
+  flex: none;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 20px 70px;
+}
+
+/* Keep the footer in the same visual environment, but transparent
+   only on the homepage. */
+body.homepage .homepage-embedded-footer {
+  position: relative;
+  z-index: 3;
+  flex-shrink: 0;
+  background: transparent !important;
+}
+
+/* ============================================================
+   HOMEPAGE MOBILE ADJUSTMENTS
+   ============================================================ */
+
+@media (max-width: 900px) {
+  body.homepage {
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  body.homepage .hero {
+    height: 100svh;
+    min-height: 100svh;
+  }
+
+  body.homepage .hero-content {
+    transform: translateY(0);
+    max-width: 100%;
+  }
+
+  body.homepage .hero-title {
+    margin-bottom: 28px;
+  }
+
+  body.homepage .hero-title-small {
+    font-size: clamp(30px, 9vw, 44px);
+    letter-spacing: 0;
+    transform: translateY(8px);
+  }
+
+  body.homepage .hero-title-big {
+    font-size: clamp(68px, 18vw, 100px);
+    letter-spacing: -1px;
+    line-height: 0.82;
+  }
+
+  body.homepage .float-scene {
+    min-height: 0;
+    height: auto;
+    overflow: visible;
+    background: #0B0908 url('../assets/Angel Ascension copy.jpg') center center / cover no-repeat;
+  }
+
+  body.homepage .float-scene-bg {
+    display: none;
+  }
+
+  body.homepage .float-cards-wrap {
+    min-height: 100svh;
+    padding: 70px 20px 50px;
+  }
+
+  body.homepage .homepage-embedded-footer {
+    background: transparent !important;
+  }
+}
+
+
+
+/* ============================================================
+   KEDAILIDA — UI SELECTION PROTECTION
+   ============================================================ */
+
+   body {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  input,
+  textarea,
+  select,
+  [contenteditable="true"] {
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
+  }
+  
+  img,
+  svg {
+    -webkit-user-drag: none;
+    user-drag: none;
+  }
+
+ /* ============================================
+   Header/Hero stacking guard — placed last to win
+   ============================================ */
+.site-header:not(.transparent-nav) {
+  position: relative !important;
+  z-index: 100 !important;
+}
+
+.portfolio-hero {
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+.portfolio-hero-bg {
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  z-index: 0 !important;
+}

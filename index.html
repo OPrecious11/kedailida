@@ -6,13 +6,12 @@
 <title>Kedailida — Concept Art & Illustration Studio</title>
 <link rel="icon" type="image/x-icon" href="/assets/Logo Stamp.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Jost:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css">
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Playfair+Display:wght@600;700&family=Jost:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body class="homepage">
 
-  <header class="site-header">
+  <header class="site-header transparent-nav">
     <div class="container">
       <a href="index.html" class="logo">
         <img src="assets/kedailida Logo Variations-07 2.png" alt="Kedailida">
@@ -22,33 +21,33 @@
           <img src="assets/kedailida Logo Variations-07 2.png" alt="Kedailida">
         </a>
         <ul class="nav-links">
-                    <li class="nav-home-link"><a href="index.html">Home</a></li>
+          <li class="nav-home-link"><a href="index.html">Home</a></li>
           <li><a href="portfolio.html">Portfolio</a></li>
           <li><a href="services.html">Services</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="contact.html">Contact</a></li>
-                  <li><a href="careers.html">Jobs</a></li>
+          <li><a href="careers.html">Jobs</a></li>
         </ul>
       </nav>
       <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle menu">
         <span></span><span></span><span></span>
       </button>
-<a href="start-project.html" class="btn-nav-cta">Start Project</a>
+      <a href="start-project.html" class="btn-nav-cta">Start Project</a>
     </div>
   </header>
 
   <div class="content-viewport">
     <div class="snap-track" id="snapTrack">
 
-      <section class="hero">
-        <img src="assets/Abel Illustration.jpg" alt="" class="hero-bg">
+      <section class="hero" id="top">
+        <img src="assets/Painting Study 25-06-23 copy.jpg" alt="" class="hero-bg">
         <div class="hero-overlay"></div>
       
         <div class="hero-content">
-          <div class="hero-badge">
-            <img src="assets/Logo Stamp.png" alt="">
-          </div>
-          <h1 class="hero-title">Welcome to a Brand New World</h1>
+          <h1 class="hero-title">
+            <span class="hero-title-small">Welcome to a <span class="hero-title-new">New</span></span>
+            <span class="hero-title-big">WORLD</span>
+          </h1>
           <a href="start-project.html" class="btn-hero-cta">Start Project</a>
           <a href="#next" class="scroll-indicator" aria-label="Scroll down">
             <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
@@ -58,59 +57,87 @@
         </div>
       </section>
 
-      <div class="float-scene">
+      <div class="float-scene" id="next">
         <img src="assets/Angel Ascension copy.jpg" alt="" class="float-scene-bg">
         <div class="float-scene-overlay"></div>
       
-        <div class="float-cards">
-          <a href="portfolio.html" class="float-card" data-tilt>
-            <img src="assets/Water Goddess Exclusive .jpg" alt="Portfolio">
-            <span class="float-card-icon">
-              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="7" height="7" rx="1"></rect><rect x="14" y="3" width="7" height="7" rx="1"></rect><rect x="3" y="14" width="7" height="7" rx="1"></rect><rect x="14" y="14" width="7" height="7" rx="1"></rect></svg>
-            </span>
-            <div class="float-card-label">Portfolio</div>
-          </a>
-          <a href="about.html" class="float-card" data-tilt>
-            <img src="assets/M_ralda Illustration.jpg" alt="About Us">
-            <span class="float-card-icon">
-              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="4"></circle><path d="M4 20c0-4.4 3.6-8 8-8s8 3.6 8 8"></path></svg>
-            </span>
-            <div class="float-card-label">About Us</div>
-          </a>
-          <a href="services.html" class="float-card" data-tilt>
-            <img src="assets/Angel Ascension copy.jpg" alt="Services">
-            <span class="float-card-icon">
-              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2l2.4 6.6L21 11l-6.6 2.4L12 20l-2.4-6.6L3 11l6.6-2.4z"></path></svg>
-            </span>
-            <div class="float-card-label">Services</div>
+        <div class="float-cards-wrap">
+          <div class="float-cards">
+            <a href="portfolio.html" class="float-card" data-tilt>
+              <img src="assets/Water Goddess Exclusive .jpg" alt="Portfolio">
+              <span class="float-card-icon">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="7" height="7" rx="1"></rect><rect x="14" y="3" width="7" height="7" rx="1"></rect><rect x="3" y="14" width="7" height="7" rx="1"></rect><rect x="14" y="14" width="7" height="7" rx="1"></rect></svg>
+              </span>
+              <div class="float-card-label">Portfolio</div>
+            </a>
+            <a href="about.html" class="float-card" data-tilt>
+              <img src="assets/M_ralda Illustration.jpg" alt="About Us">
+              <span class="float-card-icon">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="4"></circle><path d="M4 20c0-4.4 3.6-8 8-8s8 3.6 8 8"></path></svg>
+              </span>
+              <div class="float-card-label">About Us</div>
+            </a>
+            <a href="services.html" class="float-card" data-tilt>
+              <img src="assets/Angel Ascension copy.jpg" alt="Services">
+              <span class="float-card-icon">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2l2.4 6.6L21 11l-6.6 2.4L12 20l-2.4-6.6L3 11l6.6-2.4z"></path></svg>
+              </span>
+              <div class="float-card-label">Services</div>
+            </a>
+          </div>
+      
+          <a href="#top" class="scroll-indicator scroll-indicator-up" aria-label="Back to top">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="18 15 12 9 6 15"></polyline>
+            </svg>
           </a>
         </div>
+      
+        <footer class="site-footer-dark homepage-embedded-footer">
+          <div class="container footer-dark-top">
+            <div class="footer-brand">
+              <img src="assets/kedailida Logo 02.png" alt="Kedailida" class="footer-logo">
+              <p class="footer-newsletter-label">Get news on studio updates.</p>
+              <form class="footer-newsletter-form" id="newsletterForm" action="https://formspree.io/f/meaqekkg" method="POST">
+                <input type="email" name="email" placeholder="Email" required>
+                <button type="submit">Join</button>
+              </form>
+              <p class="newsletter-status" id="newsletterStatus"></p>
+              <p class="footer-newsletter-note">We respect your inbox and handle your data with care.</p>
+            </div>
+            <div class="footer-links">
+              <h4>Navigate</h4>
+              <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+              </ul>
+            </div>
+            <div class="footer-links">
+              <h4>Company</h4>
+              <ul>
+                <li><a href="about.html">About our team</a></li>
+                <li><a href="careers.html">Work with us</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="container footer-dark-bottom">
+            <p>© 2026 Kedailida. All rights reserved.</p>
+            <div class="footer-legal">
+              <a href="#">Privacy policy</a>
+              <a href="#">Terms of service</a>
+            </div>
+          </div>
+        </footer>
       </div>
 
     </div>
   </div>
 
-  <footer class="site-footer">
-    <div class="container">
-      <p class="footer-copy">© 2026 Kedailida. All rights reserved.</p>
-      <div class="social-links">
-        <a href="#" aria-label="Instagram">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-            <rect x="2" y="2" width="20" height="20" rx="5"></rect>
-            <circle cx="12" cy="12" r="4"></circle>
-            <circle cx="17.5" cy="6.5" r="1"></circle>
-          </svg>
-        </a>
-        <a href="#" aria-label="LinkedIn">
-          <svg viewBox="0 0 24 24" fill="currentColor">
-            <path d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8h4V23h-4V8zM8.5 8h3.8v2.05h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V23h-4v-6.9c0-1.65-.03-3.77-2.3-3.77-2.3 0-2.66 1.8-2.66 3.65V23h-4V8z"></path>
-          </svg>
-        </a>
-      </div>
-    </div>
-  </footer>
-
-  <script src="js/script.js"></script>
+<script src="js/newsletter.js"></script>
+<script src="js/script.js"></script>
 <script src="js/nav-mobile.js"></script>
 </body>
 </html>
