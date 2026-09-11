@@ -278,8 +278,8 @@
 }
 
 .hero-title {
-  font-family: 'Archivo Black', sans-serif;
-  font-weight: 900;
+  font-family: "dunbar-tall", "Archivo Black", sans-serif;
+  font-weight: 700;
   color: var(--white);
   margin-bottom: 40px;
   display: flex;
