@@ -11,7 +11,12 @@
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="homepage">
-
+  <!-- <div class="page-loader" id="pageLoader" data-duration="3000">
+    <video class="page-loader-video" autoplay muted playsinline>
+      <source src="assets/loader.mp4" type="video/mp4">
+    </video>
+  </div>
+  <script src="js/loader.js"></script> -->
   <header class="site-header transparent-nav">
     <div class="container">
       <a href="index.html" class="logo">
@@ -41,13 +46,22 @@
     <div class="snap-track" id="snapTrack">
 
       <section class="hero" id="top">
-        <img src="assets/Painting Study 25-06-23 copy.jpg" alt="" class="hero-bg">
+        <div class="hero-slideshow">
+          <img src="assets/New Keyframe2.jpg" alt="" class="hero-slide active">
+          <img src="assets/Painting Study 25-06-23 copy.jpg" alt="" class="hero-slide">
+          <img src="assets/Abel Illustration.jpg" alt="" class="hero-slide">
+          <img src="assets/Character Councilman .jpg" alt="" class="hero-slide">
+        </div>
         <div class="hero-overlay"></div>
       
         <div class="hero-content">
           <h1 class="hero-title">
-            <span class="hero-title-small">Welcome to a <span class="hero-title-new">New</span></span>
-            <span class="hero-title-big">WORLD</span>
+            <span class="hero-title-ghost">WORLD</span>
+            <span class="hero-title-small">...Step into our</span>
+            <span class="hero-title-big-wrap">
+              <span class="hero-title-big">WORLD.</span>
+            </span>
+          
           </h1>
           <a href="start-project.html" class="btn-hero-cta">Start Project</a>
           <a href="#next" class="scroll-indicator" aria-label="Scroll down">
@@ -140,5 +154,6 @@
 <script src="js/newsletter.js"></script>
 <script src="js/script.js"></script>
 <script src="js/nav-mobile.js"></script>
+<script src="js/hero-slideshow.js"></script>
 </body>
 </html>
