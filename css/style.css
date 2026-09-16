@@ -390,9 +390,9 @@
   text-align: center;
 
   text-shadow:
-    0 2px 24px rgba(0,0,0,0.3),
-    0 0 18px rgba(201,122,61,0.45),
-    0 0 36px rgba(201,122,61,0.25);
+  0 2px 24px rgba(0,0,0,0.3),
+  0 0 18px rgba(201,122,61,0.18),
+  0 0 36px rgba(201,122,61,0.08);
 }
 
 
@@ -403,38 +403,47 @@
    .hero-title-ghost {
     position: absolute;
   
-    top: 50%;
-    left: 50%;
-  
-    z-index: 0;
-  
-    margin: 0;
-  
-    font-size: clamp(170px, 19vw, 300px);
-  
-    font-weight: 700;
-  
-    line-height: 1;
+    /* Keep it oversized, but don't force it across the entire viewport */
+    font-size: 300px;
+    font-weight: 900;
   
     color: transparent;
   
-    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.08);
-    text-stroke: 1px rgba(255, 255, 255, 0.08);
-  
-    opacity: 1.5;
-  
-    white-space: nowrap;
-  
-    pointer-events: none;
-  
-    text-align: center;
-  
-    /* THIS physically stretches WORLD */
-    transform: translate(-50%, -50%) scaleX(1.5);
-  
-    transform-origin: center center;
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.14);
+    text-stroke: 1px rgba(255, 255, 255, 0.14);
   
     text-shadow: none;
+  
+    /* Natural letter spacing */
+    letter-spacing: -4px;
+  
+    white-space: nowrap;
+
+    font-style: italic;
+  
+    /* Keep the ghost centered behind WORLD */
+    left: 50%;
+    transform: translateX(-50%) skewX(-3deg);
+  
+    z-index: 1;
+    pointer-events: none;
+  
+    opacity: 0.7;
+  }
+
+  .hero-content {
+    animation: heroSlideIn 1.2s cubic-bezier(0.25, 0.1, 0.25, 1) 0.5s both;
+  }
+  
+  @keyframes heroSlideIn {
+    from {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 
 
@@ -472,15 +481,21 @@
 
   margin: 0 0 16px;
 
-  font-weight: 700;
+  font-weight: 400 !important;
 
-  font-size: 28px;
+  font-size: 55px !important;
 
   line-height: 1;
 
   text-align: center;
 
   white-space: nowrap;
+
+  letter-spacing: -6px !important;
+
+  font-style: italic;
+
+  transform: skewX(-3deg);
 }
 
 
@@ -497,7 +512,7 @@
 
   margin: 0;
 
-  font-weight: 700;
+  font-weight: 900 !important;
 
   font-size: 72px;
 
@@ -506,6 +521,14 @@
   text-align: center;
 
   white-space: nowrap;
+  /* Tighter lettering like the reference */
+  letter-spacing: -22px !important;
+
+  /* Slight forward italic */
+  font-style: italic;
+  
+  /* Subtle optical slant */
+  transform: skewX(-4deg);
 }
 
 
@@ -596,16 +619,18 @@
   }
 
   .hero-title-small {
-    font-size: 16px;
-
+    font-size: 40px !important;
+    letter-spacing: -4px !important;
     margin-bottom: 2px;
+    font-style: italic;
   }
 
   .hero-title-big {
-    font-size: 38px;
+    font-size: 60px !important;
+    letter-spacing: -8px !important;
+    font-style: italic;
   }
 }
-
 
 /* ============================================
    Hero scroll indicator
@@ -4361,3 +4386,5 @@ body.homepage .homepage-embedded-footer {
       height: 160px;
     }
   }
+
+  
