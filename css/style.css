@@ -491,7 +491,7 @@
 
   white-space: nowrap;
 
-  letter-spacing: -6px !important;
+  letter-spacing: -3px !important;
 
   font-style: italic;
 
@@ -512,7 +512,7 @@
 
   margin: 0;
 
-  font-weight: 900 !important;
+  font-weight: 700 !important;
 
   font-size: 72px;
 
@@ -611,7 +611,7 @@
   }
 
   .hero-title-ghost {
-    font-size: clamp(70px, 18vw, 120px);
+    font-size: clamp(100px, 18vw, 120px);
 
     -webkit-text-stroke: 1px rgba(255,255,255,0.09);
 
@@ -619,15 +619,15 @@
   }
 
   .hero-title-small {
-    font-size: 40px !important;
-    letter-spacing: -4px !important;
+    font-size: 35px !important;
+    letter-spacing: -2px !important;
     margin-bottom: 2px;
     font-style: italic;
   }
 
   .hero-title-big {
-    font-size: 60px !important;
-    letter-spacing: -8px !important;
+    font-size: 100px !important;
+    letter-spacing: -10px !important;
     font-style: italic;
   }
 }
@@ -3951,7 +3951,7 @@
 
 .portfolio-hero-titleblock h1 {
   font-family: 'Anton', sans-serif;
-  font-weight: 400;
+  font-weight: 900;
   font-size: 64px;
   text-transform: uppercase;
   color: var(--white);
@@ -4165,7 +4165,7 @@ body.homepage .hero-title-small {
   display: block;
   position: relative;
   z-index: 2;
-  font-family: 'Anton', sans-serif;
+  font-family: "dunbar-tall", sans-serif;
   font-size: clamp(42px, 5.4vw, 78px);
   line-height: 0.95;
   letter-spacing: 1px;
@@ -4177,7 +4177,7 @@ body.homepage .hero-title-big {
   display: block;
   position: relative;
   z-index: 1;
-  font-family: 'Anton', sans-serif;
+  font-family: "dunbar-tall", sans-serif;
   font-size: clamp(100px, 13vw, 190px);
   line-height: 0.78;
   letter-spacing: -3px;
@@ -4387,4 +4387,204 @@ body.homepage .homepage-embedded-footer {
     }
   }
 
-  
+  /* ============================================================
+   KEDAILIDA — HOMEPAGE ARTWORK TRANSITION
+   Keep the dark fade continuous on desktop + mobile
+   ============================================================ */
+
+body.homepage .float-scene {
+  position: relative;
+  background:
+    #0B0908 url('../assets/Angel Ascension copy.jpg')
+    center center / cover no-repeat;
+}
+
+/* Dark fade coming down from the hero */
+body.homepage .hero::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 160px;
+
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(11, 9, 8, 0.35) 45%,
+    #0B0908 100%
+  );
+
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* Dark fade entering the artwork section */
+body.homepage .float-scene::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 160px;
+
+  background: linear-gradient(
+    to bottom,
+    #0B0908 0%,
+    rgba(11, 9, 8, 0.45) 45%,
+    transparent 100%
+  );
+
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Keep the transition on mobile */
+@media (max-width: 900px) {
+  body.homepage .hero::after,
+  body.homepage .float-scene::before {
+    height: 100px;
+  }
+}
+
+.portfolio-hero-content {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 4rem clamp(24px, 5vw, 80px);
+}
+
+.portfolio-hero-titleblock {
+  width: fit-content;
+  text-align: right;
+}
+
+.portfolio-hero-title {
+  margin: 0;
+  color: #fff;
+  font-family: "Jost", sans-serif;
+  font-size: clamp(5rem, 12vw, 12rem);
+  font-weight: 900;
+  font-style: italic;
+  line-height: 0.76;
+  letter-spacing: -0.085em;
+}
+
+.portfolio-title-top,
+.portfolio-title-bottom {
+  display: block;
+  white-space: nowrap;
+}
+
+.portfolio-title-top {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.12em;
+  padding-right: 0.85em;
+}
+
+.portfolio-title-bottom {
+  margin-top: 0.02em;
+}
+
+.portfolio-hero-stamp {
+  width: 0.42em;
+  height: 0.42em;
+  object-fit: contain;
+  flex: none;
+}
+
+.portfolio-hero-caption {
+  margin: 1.5rem 0 0;
+  color: #fff;
+  font-family: "Jost", sans-serif;
+  font-size: clamp(0.8rem, 1vw, 1rem);
+  letter-spacing: 0.08em;
+}
+
+@media (max-width: 600px) {
+  .portfolio-hero-content {
+    align-items: flex-end;
+    padding: 2.5rem 20px;
+  }
+
+  .portfolio-hero-title {
+    font-size: clamp(4rem, 17vw, 6.5rem);
+  }
+
+  .portfolio-title-top {
+    padding-right: 0.65em;
+  }
+
+  .portfolio-hero-caption {
+    max-width: 220px;
+    margin-left: auto;
+    line-height: 1.4;
+  }
+}
+/* Give the two-line title room inside the hero */
+.portfolio-hero {
+  min-height: 150px;
+}
+
+.portfolio-hero-content {
+  padding-top: 70px;
+  padding-bottom: 85px;
+  box-sizing: border-box;
+}
+
+/* Make PORT / FOLIO heavier */
+.portfolio-hero-title {
+  font-weight: 900;
+}
+
+@media (max-width: 600px) {
+  .portfolio-hero {
+    min-height: 100px;
+  }
+
+  .portfolio-hero-content {
+    padding-top: 20px;
+    padding-bottom: 15px;
+  }
+}
+
+.portfolio-hero-titleblock h1.portfolio-hero-title {
+  font-family: "dunbar-tall", sans-serif;
+  font-weight: 700 !important;
+  font-style: italic;
+}
+
+@media (max-width: 600px) {
+  .site-footer-dark {
+    position: relative;
+    isolation: isolate;
+  }
+
+  @media (max-width: 900px) {
+    body.homepage .float-scene-overlay {
+      display: block;
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+      pointer-events: none;
+      background: linear-gradient(
+        to bottom,
+        transparent 0%,
+        rgba(11, 9, 8, 0.12) 35%,
+        rgba(11, 9, 8, 0.42) 65%,
+        rgba(11, 9, 8, 0.62) 100%
+      );
+    }
+  }
+
+  .site-footer-dark > .container {
+    position: relative;
+    z-index: 1;
+  }
+}
