@@ -1,102 +1,1022 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Careers — Kedailida</title>
-<link rel="icon" type="image/x-icon" href="/assets/Logo Stamp.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Jost:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css">
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Careers — Kedailida</title>
+
+  <link rel="icon" type="image/x-icon" href="/assets/Logo Stamp.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link
+
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Jost:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,500;1,400&display=swap"
+
+    rel="stylesheet"
+
+  >
+
+  <!-- Adobe / Dunbar Tall -->
+
+  <link rel="stylesheet" href="https://use.typekit.net/fck6gob.css">
+
+  <link rel="stylesheet" href="css/style.css">
+
 </head>
-<body>
+
+<body class="careers-page">
+
+  <!-- ============================================
+
+       HEADER
+
+       \============================================ -->
 
   <header class="site-header">
+
     <div class="container">
+
       <a href="index.html" class="logo">
-        <img src="assets/kedailida Logo Variations-07 2.png" alt="Kedailida">
+
+        <img
+
+          src="assets/kedailida Logo Variations-07 2.png"
+
+          alt="Kedailida"
+
+        >
+
       </a>
+
       <nav class="nav-wrap" id="navWrap">
+
         <ul class="nav-links">
-                    <li class="nav-home-link"><a href="index.html">Home</a></li>
-          <li><a href="portfolio.html">Portfolio</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
-                  <li><a href="careers.html">Jobs</a></li>
+
+          <li class="nav-home-link">
+
+            <a href="index.html">Home</a>
+
+          </li>
+
+          <li>
+
+            <a href="portfolio.html">Portfolio</a>
+
+          </li>
+
+          <li>
+
+            <a href="services.html">Services</a>
+
+          </li>
+
+          <li>
+
+            <a href="about.html">About</a>
+
+          </li>
+
+          <li>
+
+            <a href="contact.html">Contact</a>
+
+          </li>
+
+          <li>
+
+            <a href="careers.html">Jobs</a>
+
+          </li>
+
         </ul>
+
       </nav>
-            <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle menu">
-        <span></span><span></span><span></span>
+
+      <button
+
+        class="hamburger-btn"
+
+        id="hamburgerBtn"
+
+        aria-label="Toggle menu"
+
+      >
+
+        <span></span>
+
+        <span></span>
+
+        <span></span>
+
       </button>
-<a href="start-project.html" class="btn-nav-cta">Start Project</a>
+
+      <a href="start-project.html" class="btn-nav-cta">
+
+        Start Project
+
+      </a>
+
     </div>
+
   </header>
 
-  <div class="page-scroll">
+  <!-- ============================================
 
-    <section class="careers-hero">
-      <img src="assets/NewCharacter.jpg" alt="" class="careers-hero-bg">
-    <div class="careers-hero-fade"></div>
-    <div class="careers-hero-content">
-      <span class="about-tag">Join the Studio</span>
-      <h1>Work With Us</h1>
-      <p>We're always looking to connect with talented artists who share our passion for visual storytelling. Explore current openings below, or reach out even if nothing fits right now.</p>
+       CAREERS PAGE
+
+       \============================================ -->
+
+  <main class="careers-new">
+
+    <!-- ============================================
+
+         JOIN THE TEAM
+
+         \============================================ -->
+
+    <section class="careers-new-hero">
+
+      <!-- Background artwork -->
+
+      <img
+
+        src="assets/NewCharacter.jpg"
+
+        alt=""
+
+        class="careers-new-hero-bg"
+
+      >
+
+      <div class="careers-new-hero-overlay"></div>
+
+      <!-- Decorative outlined typography -->
+
+      <span
+
+        class="careers-outline-text careers-outline-top"
+
+        aria-hidden="true"
+
+      >
+
+        JOIN US
+
+      </span>
+
+      <div class="careers-new-hero-content">
+
+        <h1>
+
+          Join The Team
+
+        </h1>
+
+        <p>
+
+          Kedailida is always on the lookout for amazing talents
+
+          within and outside Africa to join our database of artists.
+
+          If you think you qualify, find your specified department
+
+          below and send us your portfolio. We look forward to seeing
+
+          your amazing creations and working with you.
+
+        </p>
+
+      </div>
+
     </section>
 
-    <section class="careers-list">
-        <div class="careers-list-inner" id="careersList">
-          <!-- Roles injected by JS -->
-        </div>
-      </section>
+    <!-- ============================================
 
-    <footer class="site-footer-dark">
-      <div class="container footer-dark-top">
-        <div class="footer-brand">
-          <img src="assets/kedailida Logo 02.png" alt="Kedailida" class="footer-logo">
-          <p class="footer-newsletter-label">Get news on studio updates.</p>
-          <form class="footer-newsletter-form" id="newsletterForm" action="https://formspree.io/f/meaqekkg" method="POST">
-              <input type="email" name="email" placeholder="Email" required>
-              <button type="submit">Join</button>
-            </form>
-            <p class="newsletter-status" id="newsletterStatus"></p>
-          <p class="footer-newsletter-note">We respect your inbox and handle your data with care.</p>
+         CAREERS DISCIPLINES
+
+         \============================================ -->
+
+    <section class="careers-roles">
+
+      <!-- Decorative background text -->
+
+      <span
+
+        class="careers-outline-text careers-outline-roles"
+
+        aria-hidden="true"
+
+      >
+
+        CREATE
+
+      </span>
+
+      <!-- ==========================================
+
+           01 — CHARACTER DESIGNER
+
+           \========================================== -->
+
+      <article class="careers-role careers-role-left">
+
+        <div class="careers-role-title">
+
+          <span class="careers-role-number">
+
+            01
+
+          </span>
+
+          <h2>
+
+            Character
+
+            <br>
+
+            Designer
+
+          </h2>
+
         </div>
 
-        <div class="footer-links">
-          <h4>Navigate</h4>
-          <ul>
-            <li class="nav-home-link"><a href="index.html">Home</a></li>
-            <li><a href="portfolio.html">Portfolio</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
+        <div class="careers-role-visual">
+
+          <img
+
+            src="assets/Character Councilman .jpg"
+
+            alt="Character design artwork"
+
+          >
+
+          <div class="careers-role-image-overlay"></div>
+
         </div>
 
-        <div class="footer-links">
-          <h4>Company</h4>
-          <ul>
-            <li><a href="about.html">About our team</a></li>
-            <li><a href="careers.html">Work with us</a></li>
-          </ul>
+        <div class="careers-role-copy">
+
+          <p>
+            A Character Designer at KEDAILIDA is responsible for developing memorable, visually
+            compelling characters that communicate personality, story, and identity through design.
+          </p>
+
+          <a
+
+            href="role.html?role=character-designer"
+
+            class="careers-apply-btn"
+
+          >
+
+            Apply here
+
+          </a>
+
         </div>
+
+      </article>
+
+      <!-- ==========================================
+
+           02 — ENVIRONMENT ARTIST
+
+           \========================================== -->
+
+      <article class="careers-role careers-role-right">
+
+        <div class="careers-role-copy">
+
+          <p>
+
+            An Environment Artist creates immersive locations and visual worlds that establish the setting,
+            atmosphere, and storytelling of a project.
+
+          </p>
+
+          <a
+
+            href="role.html?role=environment-artist"
+
+            class="careers-apply-btn"
+
+          >
+
+            Apply here
+
+          </a>
+
+        </div>
+
+        <div class="careers-role-visual">
+
+          <!-- Temporary artwork — we can swap this -->
+
+          <img
+
+            src="assets/NEW WORLDS Main Art copy.jpg"
+
+            alt="Environment concept artwork"
+
+          >
+
+          <div class="careers-role-image-overlay"></div>
+
+        </div>
+
+        <div class="careers-role-title">
+
+          <span class="careers-role-number">
+
+            02
+
+          </span>
+
+          <h2>
+
+            Environment
+
+            <br>
+
+            Artist
+
+          </h2>
+
+        </div>
+
+      </article>
+
+      <!-- ==========================================
+
+           03 — COMIC BOOK ARTIST
+
+           \========================================== -->
+
+      <article class="careers-role careers-role-left">
+
+        <div class="careers-role-title">
+
+          <span class="careers-role-number">
+
+            03
+
+          </span>
+
+          <h2>
+
+            Comic Book
+
+            <br>
+
+            Artist
+
+          </h2>
+
+        </div>
+
+        <div class="careers-role-visual">
+
+          <!-- Temporary artwork — we can swap this -->
+
+          <img
+
+            src="assets/CharacterDesign 04.jpg"
+
+            alt="Comic book artwork"
+
+          >
+
+          <div class="careers-role-image-overlay"></div>
+
+        </div>
+
+        <div class="careers-role-copy">
+
+          <p>
+
+            A Comic Book Artist translates scripts and story concepts into sequential artwork that
+            communicates characters, action, emotion, and narrative clearly.
+
+          </p>
+
+          <a
+
+            href="role.html?role=comic-book-artist"
+
+            class="careers-apply-btn"
+
+          >
+
+            Apply here
+
+          </a>
+
+        </div>
+
+      </article>
+
+      <!-- ==========================================
+
+           04 — STORYBOARD ARTIST
+
+           \========================================== -->
+
+      <article class="careers-role careers-role-right">
+
+        <div class="careers-role-copy">
+
+          <p>
+
+            A Storyboard Artist visualizes scenes and sequences to help communicate how a story,
+            animation, advertisement, or cinematic sequence should unfold.
+
+          </p>
+
+          <a
+
+            href="role.html?role=storyboard-artist"
+
+            class="careers-apply-btn"
+
+          >
+
+            Apply here
+
+          </a>
+
+        </div>
+
+        <div class="careers-role-visual">
+
+          <!-- Temporary artwork — we can swap this -->
+
+          <img
+
+            src="assets/M_ralda Illustration.jpg"
+
+            alt="Storyboard artwork"
+
+          >
+
+          <div class="careers-role-image-overlay"></div>
+
+        </div>
+
+        <div class="careers-role-title">
+
+          <span class="careers-role-number">
+
+            04
+
+          </span>
+
+          <h2>
+
+            Storyboard
+
+            <br>
+
+            Artist
+
+          </h2>
+
+        </div>
+
+      </article>
+
+      <!-- ==========================================
+
+     05 — PROP & ASSET DESIGNER
+
+     \========================================== -->
+
+      <article class="careers-role careers-role-left">
+
+        <div class="careers-role-title">
+
+          <span class="careers-role-number">
+
+            05
+
+          </span>
+
+          <h2>
+
+            Prop & Asset
+
+            <br>
+
+            Designer
+
+          </h2>
+
+        </div>
+
+        <div class="careers-role-visual">
+
+          <img
+
+            src="assets/our-story.jpg"
+
+            alt="Prop Artist"
+
+          >
+
+          <div class="careers-role-image-overlay"></div>
+
+        </div>
+
+        <div class="careers-role-copy">
+
+          <p>
+
+            A Prop & Asset Designer develops the objects, tools, weapons, vehicles, furniture, and other
+            visual assets that help build a believable world.
+
+          </p>
+
+          <a
+
+            href="role.html?role=prop-asset-designer"
+
+            class="careers-apply-btn"
+
+          >
+
+            Apply here
+
+          </a>
+
+        </div>
+
+      </article>
+
+      <!-- ==========================================
+
+     06 — Visual Development ARTIST
+
+     \========================================== -->
+
+        <article class="careers-role careers-role-right">
+
+          <div class="careers-role-copy">
+
+            <p>
+
+              A Visual Development Artist helps establish the overall visual language, mood, style, and world
+              of a creative project.
+
+            </p>
+
+            <a
+
+              href="role.html?role=visual-development-artist"
+
+              class="careers-apply-btn"
+
+            >
+
+              Apply here
+
+            </a>
+
+          </div>
+
+          <div class="careers-role-visual">
+
+            <img
+
+              src="assets/Painting Study 25-06-23 copy.jpg"
+
+              alt="3D artist artwork"
+
+            >
+
+            <div class="careers-role-image-overlay"></div>
+
+          </div>
+
+          <div class="careers-role-title">
+
+            <span class="careers-role-number">
+
+              06
+
+            </span>
+
+            <h2>
+
+              Visual Dev
+
+              <br>
+
+              Artist
+
+            </h2>
+
+          </div>
+
+        </article>
+
+        <!-- ==========================================
+
+     07 — Illustrator & Key Art Artist
+
+     \========================================== -->
+
+      <article class="careers-role careers-role-left">
+
+        <div class="careers-role-title">
+
+          <span class="careers-role-number">
+
+            07
+
+          </span>
+
+          <h2>
+
+            Illustrator &
+
+            <br>
+
+            Key Artist
+
+          </h2>
+
+        </div>
+
+        <div class="careers-role-visual">
+
+          <img
+
+            src="assets/Abel Illustration.jpg"
+
+            alt="Prop Artist"
+
+          >
+
+          <div class="careers-role-image-overlay"></div>
+
+        </div>
+
+        <div class="careers-role-copy">
+
+          <p>
+
+            An Illustrator & Key Artist creates polished, visually impactful artwork used to represent and
+            promote creative projects.
+
+          </p>
+
+          <a
+
+            href="role.html?role=illustrator-key-art-artist"
+
+            class="careers-apply-btn"
+
+          >
+
+            Apply here
+
+          </a>
+
+        </div>
+
+      </article>
+
+      <!-- ==========================================
+
+     08 — 2D Production ARTIST
+
+     \========================================== -->
+
+        <article class="careers-role careers-role-right">
+
+          <div class="careers-role-copy">
+
+            <p>
+
+              A 2D Production Artist helps turn approved concepts and creative directions into polished,
+              production-ready artwork and assets.
+
+            </p>
+
+            <a
+
+              href="role.html?role=2d-production-artist"
+
+              class="careers-apply-btn"
+
+            >
+
+              Apply here
+
+            </a>
+
+          </div>
+
+          <div class="careers-role-visual">
+
+            <img
+
+              src="assets/CharacterDesign 05.jpg"
+
+              alt="2D artist artwork"
+
+            >
+
+            <div class="careers-role-image-overlay"></div>
+
+          </div>
+
+          <div class="careers-role-title">
+
+            <span class="careers-role-number">
+
+              08
+
+            </span>
+
+            <h2>
+
+              2D Production
+
+              <br>
+
+              Artist
+
+            </h2>
+
+          </div>
+
+        </article>
+
+           <!-- ==========================================
+
+     09 — 3D Generalist
+
+     \========================================== -->
+
+      <article class="careers-role careers-role-left">
+
+        <div class="careers-role-title">
+
+          <span class="careers-role-number">
+
+            09
+
+          </span>
+
+          <h2>
+
+            3D
+
+            <br>
+
+            Generalist
+
+          </h2>
+
+        </div>
+
+        <div class="careers-role-visual">
+
+          <img
+
+            src="assets/New Keyframe.jpg"
+
+            alt="Prop Artist"
+
+          >
+
+          <div class="careers-role-image-overlay"></div>
+
+        </div>
+
+        <div class="careers-role-copy">
+
+          <p>
+
+            A 3D Generalist works across multiple areas of 3D production, including modeling, texturing,
+            lighting, rendering, and asset development.
+
+          </p>
+
+          <a
+
+            href="role.html?role=3d-generalist"
+
+            class="careers-apply-btn"
+
+          >
+
+            Apply here
+
+          </a>
+
+        </div>
+
+      </article>
+
+    </section>
+
+  </main>
+
+  <!-- ============================================
+
+       FOOTER
+
+       \============================================ -->
+
+  <footer class="site-footer-dark">
+
+    <div class="container footer-dark-top">
+
+      <div class="footer-brand">
+
+        <img
+
+          src="assets/kedailida Logo 02.png"
+
+          alt="Kedailida"
+
+          class="footer-logo"
+
+        >
+
+        <p class="footer-newsletter-label">
+
+          Get news on studio updates.
+
+        </p>
+
+        <form
+
+          class="footer-newsletter-form"
+
+          id="newsletterForm"
+
+          action="https://formspree.io/f/meaqekkg"
+
+          method="POST"
+
+        >
+
+          <input
+
+            type="email"
+
+            name="email"
+
+            placeholder="Email"
+
+            required
+
+          >
+
+          <button type="submit">
+
+            Join
+
+          </button>
+
+        </form>
+
+        <p
+
+          class="newsletter-status"
+
+          id="newsletterStatus"
+
+        ></p>
+
+        <p class="footer-newsletter-note">
+
+          We respect your inbox and handle your data with care.
+
+        </p>
+
       </div>
 
-      <div class="container footer-dark-bottom">
-        <p>© 2026 Kedailida. All rights reserved.</p>
-        <div class="footer-legal">
-          <a href="#">Privacy policy</a>
-          <a href="#">Terms of service</a>
-        </div>
-      </div>
-    </footer>
+      <div class="footer-links">
 
-  </div>
-  <script src="js/careers-data.js"></script>
-  <script src="js/careers.js"></script>
+        <h4>Navigate</h4>
+
+        <ul>
+
+          <li class="nav-home-link">
+
+            <a href="index.html">Home</a>
+
+          </li>
+
+          <li>
+
+            <a href="portfolio.html">Portfolio</a>
+
+          </li>
+
+          <li>
+
+            <a href="services.html">Services</a>
+
+          </li>
+
+          <li>
+
+            <a href="about.html">About</a>
+
+          </li>
+
+          <li>
+
+            <a href="contact.html">Contact</a>
+
+          </li>
+
+        </ul>
+
+      </div>
+
+      <div class="footer-links">
+
+        <h4>Company</h4>
+
+        <ul>
+
+          <li>
+
+            <a href="about.html">
+
+              About our team
+
+            </a>
+
+          </li>
+
+          <li>
+
+            <a href="careers.html">
+
+              Work with us
+
+            </a>
+
+          </li>
+
+        </ul>
+
+      </div>
+
+    </div>
+
+    <div class="container footer-dark-bottom">
+
+      <p>
+
+        © 2026 Kedailida. All rights reserved.
+
+      </p>
+
+      <div class="footer-legal">
+
+        <a href="#">
+
+          Privacy policy
+
+        </a>
+
+        <a href="#">
+
+          Terms of service
+
+        </a>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+  <!-- ============================================
+
+       SCRIPTS
+
+       \============================================ -->
+
   <script src="js/scroll-reveal.js"></script>
-<script src="js/nav-mobile.js"></script>
-<script src="js/newsletter.js"></script>
+
+  <script src="js/nav-mobile.js"></script>
+
+  <script src="js/newsletter.js"></script>
+
 </body>
+
 </html>
