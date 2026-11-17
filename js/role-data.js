@@ -8,7 +8,7 @@ const KEDAILIDA_ROLES = {
     location: "Africa",
     department: "Character Design",
 
-    image: "assets/Character Councilman .jpg",
+    image: "assets/CHAracter Design.png",
 
     description:
       "We are looking for a Character Designer with a strong understanding of anatomy, shape language, costume design, visual storytelling, and character development. You will transform written concepts and creative briefs into distinctive character designs that can be used across books, games, comics, animation, and other visual projects.",
@@ -43,7 +43,7 @@ const KEDAILIDA_ROLES = {
     location: "Africa",
     department: "Environment Design",
 
-    image: "assets/NEW WORLDS Main Art copy.jpg",
+    image: "assets/Environment Design.png",
 
     description:
       "We are looking for an Environment Artist who can transform ideas and written descriptions into visually engaging environments. You will work on locations ranging from realistic settings to imaginative fantasy, sci-fi, and stylized worlds.",
@@ -78,7 +78,7 @@ const KEDAILIDA_ROLES = {
     location: "Africa",
     department: "Sequential Art",
 
-    image: "assets/CharacterDesign 04.jpg",
+    image: "assets/Comic Book Artist.png",
 
     description:
       "We are looking for a Comic Book Artist who understands sequential storytelling and can create engaging artwork from scripts or storyboards. You will contribute to comic projects by developing panels, characters, environments, action, and visual storytelling.",
@@ -184,7 +184,7 @@ const KEDAILIDA_ROLES = {
     location: "Africa",
     department: "Visual Development",
 
-    image: "assets/Painting Study 25-06-23 copy.jpg",
+    image: "assets/Vis_Dev Artist.png",
 
     description:
       "We are looking for a Visual Development Artist who enjoys exploring ideas and developing visual directions. You will help shape the look and feel of projects through experimentation with characters, environments, color, composition, lighting, and style.",
@@ -255,7 +255,7 @@ const KEDAILIDA_ROLES = {
     location: "Africa",
     department: "2D Production",
 
-    image: "assets/CharacterDesign 05.jpg",
+    image: "assets/2d Production.png",
 
     description:
       "We are looking for a 2D Production Artist who is comfortable working within established styles and production pipelines. You will support the development, refinement, and preparation of 2D assets while maintaining consistency and quality throughout a project.",

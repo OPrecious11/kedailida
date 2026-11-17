@@ -120,6 +120,6 @@ document.addEventListener("DOMContentLoaded", () => {
       encodeURIComponent(`${role.title} Application`);
   
     applicationButton.href =
-      `mailto:hello@kedailida.com?subject=${subject}`;
+      `mailto:socials@kedailida.com?subject=${subject}`;
   
   });
