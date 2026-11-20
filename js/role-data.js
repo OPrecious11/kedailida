@@ -114,7 +114,7 @@ const KEDAILIDA_ROLES = {
     location: "Africa",
     department: "Storyboarding",
 
-    image: "assets/M_ralda Illustration.jpg",
+    /*image: "assets/M_ralda Illustration.jpg",*/
 
     description:
       "We are looking for a Storyboard Artist who can translate scripts and creative direction into clear, dynamic visual sequences. The ideal candidate understands camera angles, staging, composition, movement, and visual storytelling.",
@@ -149,7 +149,7 @@ const KEDAILIDA_ROLES = {
     location: "Africa",
     department: "Prop & Asset Design",
 
-    image: "assets/our-story.jpg",
+    /* image: "assets/our-story.jpg", */
 
     description:
       "We are looking for a designer who can create visually interesting and functional props and assets that fit the style and narrative of a project. You will develop assets from initial concepts through refined designs.",
@@ -291,7 +291,7 @@ const KEDAILIDA_ROLES = {
     location: "Africa",
     department: "3D",
 
-    image: "assets/New Keyframe.jpg",
+    /* image: "assets/New Keyframe.jpg", */
 
     description:
       "We are looking for a versatile 3D Generalist who can contribute to different stages of a 3D production pipeline. The ideal candidate is comfortable moving between tasks and can create visually strong assets while working within the creative direction of a project.",
