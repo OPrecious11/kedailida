@@ -7036,3 +7036,23 @@ body.careers-page .careers-role {
 body.homepage {
   --font-display: 'Playfair Display', Georgia, serif;
 }
+
+/* ============================================
+   Kedailida — Dark Mode Header Logo
+   Homepage intentionally excluded
+   ============================================ */
+
+   html[data-theme="dark"] body:not(.homepage)
+   .site-header:not(.transparent-nav) .logo img,
+   
+   html[data-theme="dark"] body:not(.homepage)
+   .site-header:not(.transparent-nav) .nav-wrap-logo img {
+     filter: brightness(0) invert(1);
+   }
+   
+
+/* Portfolio — Clean artwork viewing mode */
+.lightbox-info {
+  display: none !important;
+}
+
