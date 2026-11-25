@@ -7070,8 +7070,15 @@ html[data-theme="dark"] body:not(.homepage) .site-header .nav-wrap-logo img {
 
 /* When the visitor's device is using dark mode */
 @media (prefers-color-scheme: dark) {
-  body:not(.homepage) .site-header .logo img,
-  body:not(.homepage) .site-header .nav-wrap-logo img {
+  /* Match the white logo to a dark header, without changing the layout. */
+  html:not([data-theme]) body:not(.homepage) .site-header:not(.transparent-nav) {
+    --page-surface: #17130F;
+    --page-ink: #F5F1EA;
+    --page-border: rgba(255, 255, 255, 0.1);
+  }
+
+  html:not([data-theme]) body:not(.homepage) .site-header:not(.transparent-nav) .logo img,
+  html:not([data-theme]) body:not(.homepage) .site-header:not(.transparent-nav) .nav-wrap-logo img {
     filter: brightness(0) invert(1) !important;
   }
 }
