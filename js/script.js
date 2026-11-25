@@ -38,9 +38,9 @@ const supportsHover = window.matchMedia('(hover: hover) and (pointer: fine)').ma
 // Hero card — auto-advancing carousel
 // ============================================
 const heroCharacters = [
-  { name: "Abel", image: "assets/Abel Illustration.jpg" },
-  { name: "The Water Goddess", image: "assets/Water Goddess Exclusive .jpg" },
-  { name: "M'ralda", image: "assets/M_ralda Illustration.jpg" }
+  { name: "Abel", image: "assets/optimized/abel-illustration-display.webp" },
+  { name: "The Water Goddess", image: "assets/optimized/water-goddess-exclusive-display.webp" },
+  { name: "M'ralda", image: "assets/optimized/m-ralda-illustration-display.webp" }
 ];
 
 let heroIndex = 0;

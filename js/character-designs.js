@@ -4,7 +4,7 @@ const packages = [
   {
     title: "SINGLE CHARACTER PACKAGE",
     dropdownValue: "Single Character Package",
-    image: "assets/CharacterDesign 06(Dailida).jpg",
+    image: "assets/optimized/characterdesign-06-dailida-display.webp",
     includes: [
       "1 Full Character Design",
       "Front view Character illustration",
@@ -24,7 +24,7 @@ const packages = [
   {
     title: "STANDARD CHARACTER PACKAGE",
     dropdownValue: "Standard Character Package",
-    image: "assets/CharacterDesign 01.jpg",
+    image: "assets/optimized/characterdesign-01-display.webp",
     includes: [
       "Full Character Design sheet",
       "Front/Side/Back view",
@@ -45,7 +45,7 @@ const packages = [
   {
     title: "PREMIUM CHARACTER PACKAGE",
     dropdownValue: "Premium Character Package",
-    image: "assets/CharacterDesign 07.jpg",
+    image: "assets/optimized/characterdesign-07-display.webp",
     includes: [
       "Multiple Character Designs (Up to 5 Characters)",
       "Full Character Turnarounds",

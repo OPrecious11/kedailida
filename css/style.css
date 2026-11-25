@@ -4208,7 +4208,7 @@ body.homepage .float-scene {
   min-height: 100vh;
   height: auto;
   overflow: visible;
-  background: #0B0908 url('../assets/Angel Ascension copy.jpg') center center / cover no-repeat;
+  background: #0B0908 url('../assets/optimized/angel-ascension-copy-display.webp') center center / cover no-repeat;
 }
 
 /* Use the scene itself as the continuous artwork surface so the
@@ -4288,7 +4288,7 @@ body.homepage .homepage-embedded-footer {
     min-height: 0;
     height: auto;
     overflow: visible;
-    background: #0B0908 url('../assets/Angel Ascension copy.jpg') center center / cover no-repeat;
+    background: #0B0908 url('../assets/optimized/angel-ascension-copy-display.webp') center center / cover no-repeat;
   }
 
   body.homepage .float-scene-bg {
@@ -4395,7 +4395,7 @@ body.homepage .homepage-embedded-footer {
 body.homepage .float-scene {
   position: relative;
   background:
-    #0B0908 url('../assets/Angel Ascension copy.jpg')
+    #0B0908 url('../assets/optimized/angel-ascension-copy-display.webp')
     center center / cover no-repeat;
 }
 
@@ -5695,7 +5695,7 @@ body.careers-page .careers-new {
       #0B0908 100%
     ),
 
-    url('../assets/CharacterDesign\ 04.jpg');
+    url('../assets/optimized/characterdesign-04-display.webp');
     
 
   background-size:
@@ -5850,7 +5850,7 @@ body.careers-page .careers-role {
         #0B0908 100%
       ),
 
-      url('../assets/CharacterDesign\ 04.jpg');
+      url('../assets/optimized/characterdesign-04-display.webp');
 
     background-size:
       100% 100%,

@@ -8,7 +8,7 @@ const KEDAILIDA_ROLES = {
     location: "Africa",
     department: "Character Design",
 
-    image: "assets/CHAracter Design.png",
+    image: "assets/optimized/character-design-display.webp",
 
     description:
       "We are looking for a Character Designer with a strong understanding of anatomy, shape language, costume design, visual storytelling, and character development. You will transform written concepts and creative briefs into distinctive character designs that can be used across books, games, comics, animation, and other visual projects.",
@@ -43,7 +43,7 @@ const KEDAILIDA_ROLES = {
     location: "Africa",
     department: "Environment Design",
 
-    image: "assets/Environment Design.png",
+    image: "assets/optimized/environment-design-display.webp",
 
     description:
       "We are looking for an Environment Artist who can transform ideas and written descriptions into visually engaging environments. You will work on locations ranging from realistic settings to imaginative fantasy, sci-fi, and stylized worlds.",
@@ -78,7 +78,7 @@ const KEDAILIDA_ROLES = {
     location: "Africa",
     department: "Sequential Art",
 
-    image: "assets/Comic Book Artist.png",
+    image: "assets/optimized/comic-book-artist-display.webp",
 
     description:
       "We are looking for a Comic Book Artist who understands sequential storytelling and can create engaging artwork from scripts or storyboards. You will contribute to comic projects by developing panels, characters, environments, action, and visual storytelling.",
@@ -114,7 +114,7 @@ const KEDAILIDA_ROLES = {
     location: "Africa",
     department: "Storyboarding",
 
-    /*image: "assets/M_ralda Illustration.jpg",*/
+    /*image: "assets/optimized/m-ralda-illustration-display.webp",*/
 
     description:
       "We are looking for a Storyboard Artist who can translate scripts and creative direction into clear, dynamic visual sequences. The ideal candidate understands camera angles, staging, composition, movement, and visual storytelling.",
@@ -149,7 +149,7 @@ const KEDAILIDA_ROLES = {
     location: "Africa",
     department: "Prop & Asset Design",
 
-    /* image: "assets/our-story.jpg", */
+    /* image: "assets/optimized/our-story-display.webp", */
 
     description:
       "We are looking for a designer who can create visually interesting and functional props and assets that fit the style and narrative of a project. You will develop assets from initial concepts through refined designs.",
@@ -184,7 +184,7 @@ const KEDAILIDA_ROLES = {
     location: "Africa",
     department: "Visual Development",
 
-    image: "assets/Vis_Dev Artist.png",
+    image: "assets/optimized/vis-dev-artist-display.webp",
 
     description:
       "We are looking for a Visual Development Artist who enjoys exploring ideas and developing visual directions. You will help shape the look and feel of projects through experimentation with characters, environments, color, composition, lighting, and style.",
@@ -220,7 +220,7 @@ const KEDAILIDA_ROLES = {
     location: "Africa",
     department: "Illustration",
 
-    image: "assets/Abel Illustration.jpg",
+    image: "assets/optimized/abel-illustration-display.webp",
 
     description:
       "We are looking for an Illustrator & Key Artist capable of producing high-quality finished illustrations with strong composition, lighting, storytelling, and visual impact. Your work may be used for book covers, promotional campaigns, game projects, marketing materials, and other creative applications.",
@@ -255,7 +255,7 @@ const KEDAILIDA_ROLES = {
     location: "Africa",
     department: "2D Production",
 
-    image: "assets/2d Production.png",
+    image: "assets/optimized/2d-production-display.webp",
 
     description:
       "We are looking for a 2D Production Artist who is comfortable working within established styles and production pipelines. You will support the development, refinement, and preparation of 2D assets while maintaining consistency and quality throughout a project.",
@@ -291,7 +291,7 @@ const KEDAILIDA_ROLES = {
     location: "Africa",
     department: "3D",
 
-    /* image: "assets/New Keyframe.jpg", */
+    /* image: "assets/optimized/new-keyframe-display.webp", */
 
     description:
       "We are looking for a versatile 3D Generalist who can contribute to different stages of a 3D production pipeline. The ideal candidate is comfortable moving between tasks and can create visually strong assets while working within the creative direction of a project.",

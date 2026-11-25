@@ -1,24 +1,24 @@
 const portfolioData = [
-  { name: "Abel", tag: "Keyframe & Storyboard", category: "keyframe", image: "assets/Abel Illustration.jpg" },
-  { name: "M_ralda", tag: "Keyframe & Storyboard", category: "keyframe", image: "assets/M_ralda Illustration.jpg" },
-  { name: "M_ralda", tag: "Keyframe & Storyboard", category: "keyframe", image: "assets/New Keyframe.jpg" },
-  { name: "Jyamelah and Jha'kendr", tag: "Keyframe & Storyboard", category: "keyframe", image: "assets/New Keyframe2.jpg" },
-  { name: "Jyamelah and Jha'kendr", tag: "Promotional", category: "promotional", image: "assets/New Keyframe2.jpg" },
-  { name: "M_ralda", tag: "Promotional", category: "promotional", image: "assets/New Keyframe.jpg" },
-  { name: "Jyamelah", tag: "Promotional", category: "promotional", image: "assets/Jyamelah- Pin up.jpg" },
-  { name: "Dailida", tag: "Character Design", category: "character", image: "assets/CharacterDesign 06(Dailida).jpg" },
-  { name: "Abel", tag: "Character Design", category: "character", image: "assets/Abel Detailed.jpg" },
-  { name: "J'yamelah", tag: "Character Design", category: "character", image: "assets/J'yamelah Detailed.jpg" },
-  { name: "Devil Hunter", tag: "Character Design", category: "character", image: "assets/CharacterDesign 02.jpg" },
-  { name: "Devil Hunter", tag: "Character Design", category: "character", image: "assets/CharacterDesign 03.jpg" },
-  { name: "Abel", tag: "Character Design", category: "character", image: "assets/Abel2.0.jpg" },
-  { name: "M_ralda", tag: "Character Design", category: "character", image: "assets/CharacterDesign 08.jpg" },
-  { name: "M_ralda", tag: "Character Design", category: "character", image: "assets/CharacterDesign 07.jpg" },
-  { name: "Councilman", tag: "Keyframe & Storyboard", category: "keyframe", image: "assets/Character Councilman .jpg" },
-  { name: "Angel", tag: "Keyframe & Storyboard", category: "keyframe", image: "assets/Angel Ascension copy.jpg" },
-  { name: "Goddess", tag: "Character Design", category: "character", image: "assets/NewCharacter.jpg" },
-  { name: "Goddess", tag: "Keyframe & Storyboard", category: "keyframe", image: "assets/Water Goddess Exclusive .jpg" },
-  { name: "Mercenary", tag: "Keyframe & Storyboard", category: "keyframe", image: "assets/Painting Study 25-06-23 copy.jpg" },
+  { name: "Abel", tag: "Keyframe & Storyboard", category: "keyframe", image: "assets/optimized/abel-illustration-detail.webp", thumbnail: "assets/optimized/abel-illustration-thumb.webp" },
+  { name: "M_ralda", tag: "Keyframe & Storyboard", category: "keyframe", image: "assets/optimized/m-ralda-illustration-detail.webp", thumbnail: "assets/optimized/m-ralda-illustration-thumb.webp" },
+  { name: "M_ralda", tag: "Keyframe & Storyboard", category: "keyframe", image: "assets/optimized/new-keyframe-detail.webp", thumbnail: "assets/optimized/new-keyframe-thumb.webp" },
+  { name: "Jyamelah and Jha'kendr", tag: "Keyframe & Storyboard", category: "keyframe", image: "assets/optimized/new-keyframe2-detail.webp", thumbnail: "assets/optimized/new-keyframe2-thumb.webp" },
+  { name: "Jyamelah and Jha'kendr", tag: "Promotional", category: "promotional", image: "assets/optimized/new-keyframe2-detail.webp", thumbnail: "assets/optimized/new-keyframe2-thumb.webp" },
+  { name: "M_ralda", tag: "Promotional", category: "promotional", image: "assets/optimized/new-keyframe-detail.webp", thumbnail: "assets/optimized/new-keyframe-thumb.webp" },
+  { name: "Jyamelah", tag: "Promotional", category: "promotional", image: "assets/optimized/jyamelah-pin-up-detail.webp", thumbnail: "assets/optimized/jyamelah-pin-up-thumb.webp" },
+  { name: "Dailida", tag: "Character Design", category: "character", image: "assets/optimized/characterdesign-06-dailida-detail.webp", thumbnail: "assets/optimized/characterdesign-06-dailida-thumb.webp" },
+  { name: "Abel", tag: "Character Design", category: "character", image: "assets/optimized/abel-detailed-detail.webp", thumbnail: "assets/optimized/abel-detailed-thumb.webp" },
+  { name: "J'yamelah", tag: "Character Design", category: "character", image: "assets/optimized/j-yamelah-detailed-detail.webp", thumbnail: "assets/optimized/j-yamelah-detailed-thumb.webp" },
+  { name: "Devil Hunter", tag: "Character Design", category: "character", image: "assets/optimized/characterdesign-02-detail.webp", thumbnail: "assets/optimized/characterdesign-02-thumb.webp" },
+  { name: "Devil Hunter", tag: "Character Design", category: "character", image: "assets/optimized/characterdesign-03-detail.webp", thumbnail: "assets/optimized/characterdesign-03-thumb.webp" },
+  { name: "Abel", tag: "Character Design", category: "character", image: "assets/optimized/abel2-0-detail.webp", thumbnail: "assets/optimized/abel2-0-thumb.webp" },
+  { name: "M_ralda", tag: "Character Design", category: "character", image: "assets/optimized/characterdesign-08-detail.webp", thumbnail: "assets/optimized/characterdesign-08-thumb.webp" },
+  { name: "M_ralda", tag: "Character Design", category: "character", image: "assets/optimized/characterdesign-07-detail.webp", thumbnail: "assets/optimized/characterdesign-07-thumb.webp" },
+  { name: "Councilman", tag: "Keyframe & Storyboard", category: "keyframe", image: "assets/optimized/character-councilman-detail.webp", thumbnail: "assets/optimized/character-councilman-thumb.webp" },
+  { name: "Angel", tag: "Keyframe & Storyboard", category: "keyframe", image: "assets/optimized/angel-ascension-copy-detail.webp", thumbnail: "assets/optimized/angel-ascension-copy-thumb.webp" },
+  { name: "Goddess", tag: "Character Design", category: "character", image: "assets/optimized/newcharacter-detail.webp", thumbnail: "assets/optimized/newcharacter-thumb.webp" },
+  { name: "Goddess", tag: "Keyframe & Storyboard", category: "keyframe", image: "assets/optimized/water-goddess-exclusive-detail.webp", thumbnail: "assets/optimized/water-goddess-exclusive-thumb.webp" },
+  { name: "Mercenary", tag: "Keyframe & Storyboard", category: "keyframe", image: "assets/optimized/painting-study-25-06-23-copy-detail.webp", thumbnail: "assets/optimized/painting-study-25-06-23-copy-thumb.webp" },
 ];
 
 const grid = document.getElementById('galleryGrid');
@@ -46,7 +46,7 @@ let currentPos = 0;
 function renderGrid() {
   grid.innerHTML = portfolioData.map((item, i) => `
     <div class="gallery-item" data-category="${item.category}" data-index="${i}">
-      <img src="${item.image}" alt="${item.name}">
+      <img src="${item.thumbnail}" alt="${item.name}" loading="lazy" decoding="async">
       <div class="gallery-item-caption">
         <span>${item.tag}</span>
         <h4>${item.name}</h4>
